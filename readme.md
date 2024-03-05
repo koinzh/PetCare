@@ -113,6 +113,6 @@ MIT license
 * Bowen Ren https://github.com/midori-jojo
 * Zhiyu Ren https://github.com/rasethna
 * Xiaoyu Zhang https://github.com/koinzh
-* Project Link: https://github.com/koinzh/smart_pet_care_system
+* Project Link: https://github.com/koinzh/PetCare
 * TikTok Link: https://www.tiktok.com/@smartpetcaresyste?_t=8kk3llkyQGP&_r=1
 
