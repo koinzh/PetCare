@@ -1,11 +1,18 @@
-#include "widget.h"
+#include "SmartPet.h"
 
-#include <QApplication>
+int main() {
+    // 指定传感器和电机的引脚编号
+    int trigPin = 28; 
+    int echoPin = 29;
+    
+    
+    int in1 = 0;
+    int in2 = 1;
+    int in3 = 2;
+    int in4 = 3;
 
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
-    Widget w;
-    w.show();
-    return a.exec();
+    SmartPet pet(trigPin, echoPin, in1, in2, in3, in4);
+    pet.run();
+    
+    return 0;
 }
