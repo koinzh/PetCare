@@ -13,4 +13,7 @@ CMakeFiles/SmartPet.dir/lib/sonic.cpp.o
  /home/pi/Desktop/PetCare/codes/lib/sonic.cpp
  /home/pi/Desktop/PetCare/codes/lib/sonic.h
 CMakeFiles/SmartPet.dir/main.cpp.o
+ ../lib/SmartPet.h
+ ../lib/motor.h
+ ../lib/sonic.h
  /home/pi/Desktop/PetCare/codes/main.cpp

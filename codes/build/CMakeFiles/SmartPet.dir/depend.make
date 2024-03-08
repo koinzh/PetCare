@@ -12,5 +12,8 @@ CMakeFiles/SmartPet.dir/lib/motor.cpp.o: ../lib/motor.h
 CMakeFiles/SmartPet.dir/lib/sonic.cpp.o: ../lib/sonic.cpp
 CMakeFiles/SmartPet.dir/lib/sonic.cpp.o: ../lib/sonic.h
 
+CMakeFiles/SmartPet.dir/main.cpp.o: ../lib/SmartPet.h
+CMakeFiles/SmartPet.dir/main.cpp.o: ../lib/motor.h
+CMakeFiles/SmartPet.dir/main.cpp.o: ../lib/sonic.h
 CMakeFiles/SmartPet.dir/main.cpp.o: ../main.cpp
 

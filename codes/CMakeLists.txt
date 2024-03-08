@@ -20,3 +20,5 @@ set(SOURCE_FILES
 
 add_executable(SmartPet ${SOURCE_FILES})
 target_link_libraries(SmartPet ${WiringPi_LIBRARY})
+find_package(Threads REQUIRED)
+target_link_libraries(SmartPet Threads::Threads)
