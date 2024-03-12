@@ -2,10 +2,8 @@
 #include <wiringPi.h>
 
 int main() {
-    wiringPiSetup(); // 程序开始时调用一次
-
-    // 指定传感器和电机的引脚编号
-    int trigPin = 28;
+    wiringPiSetup(); // 初始化wiringPi并设置GPIO引脚
+    int trigPin = 28; 
     int echoPin = 29;
     int in1 = 0;
     int in2 = 1;

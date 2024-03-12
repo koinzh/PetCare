@@ -1,36 +1,47 @@
 #include "sonic.h"
 #include <wiringPi.h>
 #include <sys/time.h>
-// #include <cstddef> // Not needed if using nullptr instead of NULL
+#include <thread>
+#include <chrono>
 
-UltrasonicSensor::UltrasonicSensor(int trig, int echo) : trig(trig), echo(echo) {
-    wiringPiSetup();
-}
-
-void UltrasonicSensor::initialize() {
+UltrasonicSensor::UltrasonicSensor(int trigger, int echo) : trig(trigger), echo(echo) {
+    wiringPiSetup(); 
     pinMode(trig, OUTPUT);
     pinMode(echo, INPUT);
 }
 
+void UltrasonicSensor::initialize() {
+    // 额外的初始化步骤
+}
+
 long UltrasonicSensor::timeMicroseconds() {
     struct timeval tv;
-    gettimeofday(&tv, nullptr); // Using nullptr
+    gettimeofday(&tv, nullptr); 
     return tv.tv_sec * 1000000 + tv.tv_usec;
 }
 
-float UltrasonicSensor::measureDistance() {
-    digitalWrite(trig, LOW);
-    delayMicroseconds(2);
-    digitalWrite(trig, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(trig, LOW);
+void UltrasonicSensor::measureDistanceAsync(const std::function<void(float)>& callback) {
+    std::thread([this, callback]() {
+        while (true) { // 持续测量距离
+            digitalWrite(trig, LOW);
+            std::this_thread::sleep_for(std::chrono::microseconds(2));
+            digitalWrite(trig, HIGH);
+            std::this_thread::sleep_for(std::chrono::microseconds(10));
+            digitalWrite(trig, LOW);
 
-    while(digitalRead(echo) == LOW);
-    long startTime = timeMicroseconds();
-    while(digitalRead(echo) == HIGH);
-    long travelTime = timeMicroseconds() - startTime;
+            while (digitalRead(echo) == LOW);
+            long startTime = timeMicroseconds();
+            while (digitalRead(echo) == HIGH);
+            long travelTime = timeMicroseconds() - startTime;
 
-    // Speed of sound in air (in cm/microsecond)
-    float speedOfSound = 340.0 / 10000;
-    return (travelTime * speedOfSound) / 2;
+            float speedOfSound = 340.29 / 10000; 
+            float distance = (travelTime * speedOfSound) / 2;
+
+            if (callback) {
+                callback(distance);
+            }
+
+            std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 在连续测量之间稍作延时
+        }
+    }).detach(); // 在后台线程中运行，不阻塞主线程
 }

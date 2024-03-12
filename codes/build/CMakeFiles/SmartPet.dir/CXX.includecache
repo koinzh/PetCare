@@ -15,13 +15,17 @@ motor.h
 ../lib/motor.h
 
 ../lib/sonic.h
+functional
+-
 
 /home/pi/Desktop/PetCare/codes/lib/SmartPet.cpp
 SmartPet.h
 /home/pi/Desktop/PetCare/codes/lib/SmartPet.h
 iostream
 -
-unistd.h
+thread
+-
+chrono
 -
 
 /home/pi/Desktop/PetCare/codes/lib/SmartPet.h
@@ -40,7 +44,21 @@ thread
 
 /home/pi/Desktop/PetCare/codes/lib/motor.h
 
+/home/pi/Desktop/PetCare/codes/lib/sonic.cpp
+sonic.h
 /home/pi/Desktop/PetCare/codes/lib/sonic.h
+wiringPi.h
+-
+sys/time.h
+-
+thread
+-
+chrono
+-
+
+/home/pi/Desktop/PetCare/codes/lib/sonic.h
+functional
+-
 
 /home/pi/Desktop/PetCare/codes/main.cpp
 SmartPet.h

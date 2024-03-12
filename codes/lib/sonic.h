@@ -1,11 +1,13 @@
 #ifndef SMARTPET_SONIC_H
 #define SMARTPET_SONIC_H
 
+#include <functional>
+
 class UltrasonicSensor {
 public:
     UltrasonicSensor(int trigger, int echo);
     void initialize();
-    float measureDistance();
+    void measureDistanceAsync(const std::function<void(float)>& callback);
 
 private:
     int trig;
@@ -13,4 +15,4 @@ private:
     long timeMicroseconds();
 };
 
-#endif //SMARTPET_SONIC_H
+#endif // SMARTPET_SONIC_H
