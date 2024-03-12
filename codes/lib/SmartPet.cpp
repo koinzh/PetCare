@@ -3,10 +3,10 @@
 #include <thread>
 #include <chrono>
 
-// 构造函数，初始化成员变量并配置传感器。
+// 构造函数，初始化成员变量
 SmartPet::SmartPet(int trigPin, int echoPin, int in1, int in2, int in3, int in4)
 : sensor(trigPin, echoPin), motor(in1, in2, in3, in4), motorRunning(false), shouldOperateMotor(false) {
-    sensor.initialize(); // 初始化传感器
+   
 }
 
 // 主运行循环。

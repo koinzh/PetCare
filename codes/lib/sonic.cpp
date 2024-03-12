@@ -10,9 +10,7 @@ UltrasonicSensor::UltrasonicSensor(int trigger, int echo) : trig(trigger), echo(
     pinMode(echo, INPUT);
 }
 
-void UltrasonicSensor::initialize() {
-    // 额外的初始化步骤
-}
+
 
 long UltrasonicSensor::timeMicroseconds() {
     struct timeval tv;

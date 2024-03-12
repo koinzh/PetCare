@@ -6,7 +6,6 @@
 class UltrasonicSensor {
 public:
     UltrasonicSensor(int trigger, int echo);
-    void initialize();
     void measureDistanceAsync(const std::function<void(float)>& callback);
 
 private:
