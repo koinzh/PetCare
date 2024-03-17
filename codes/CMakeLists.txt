@@ -13,9 +13,12 @@ set(SOURCE_FILES
     ../lib/SmartPet.h
     ../lib/sonic.h
     ../lib/motor.h
+    ../lib/weight.h
     ../lib/SmartPet.cpp
     ../lib/sonic.cpp
     ../lib/motor.cpp
+    ../lib/weight.cpp
+    
 )
 
 add_executable(SmartPet ${SOURCE_FILES})

@@ -6,11 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/Desktop/PetCare/codes/lib/motor.cpp
+../lib/SmartPet.h
+sonic.h
+../lib/sonic.h
 motor.h
-/home/pi/Desktop/PetCare/codes/lib/motor.h
+../lib/motor.h
+weight.h
+../lib/weight.h
+
+../lib/motor.h
+
+../lib/sonic.h
+functional
+-
+
+../lib/weight.h
 wiringPi.h
 -
+
+/home/pi/Desktop/PetCare/codes/lib/SmartPet.cpp
+SmartPet.h
+/home/pi/Desktop/PetCare/codes/lib/SmartPet.h
 iostream
 -
 thread
@@ -18,5 +34,37 @@ thread
 chrono
 -
 
+/home/pi/Desktop/PetCare/codes/lib/SmartPet.h
+sonic.h
+/home/pi/Desktop/PetCare/codes/lib/sonic.h
+motor.h
 /home/pi/Desktop/PetCare/codes/lib/motor.h
+weight.h
+/home/pi/Desktop/PetCare/codes/lib/weight.h
+
+/home/pi/Desktop/PetCare/codes/lib/motor.h
+
+/home/pi/Desktop/PetCare/codes/lib/sonic.h
+functional
+-
+
+/home/pi/Desktop/PetCare/codes/lib/weight.cpp
+weight.h
+/home/pi/Desktop/PetCare/codes/lib/weight.h
+wiringPi.h
+-
+stdio.h
+-
+cmath
+-
+
+/home/pi/Desktop/PetCare/codes/lib/weight.h
+wiringPi.h
+-
+
+/home/pi/Desktop/PetCare/codes/main.cpp
+SmartPet.h
+/home/pi/Desktop/PetCare/codes/SmartPet.h
+wiringPi.h
+-
 

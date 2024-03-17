@@ -223,6 +223,33 @@ lib/sonic.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/sonic.cpp.s
 .PHONY : lib/sonic.cpp.s
 
+lib/weight.o: lib/weight.cpp.o
+
+.PHONY : lib/weight.o
+
+# target to build an object file
+lib/weight.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/weight.cpp.o
+.PHONY : lib/weight.cpp.o
+
+lib/weight.i: lib/weight.cpp.i
+
+.PHONY : lib/weight.i
+
+# target to preprocess a source file
+lib/weight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/weight.cpp.i
+.PHONY : lib/weight.cpp.i
+
+lib/weight.s: lib/weight.cpp.s
+
+.PHONY : lib/weight.s
+
+# target to generate assembly for a file
+lib/weight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/weight.cpp.s
+.PHONY : lib/weight.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -268,6 +295,9 @@ help:
 	@echo "... lib/sonic.o"
 	@echo "... lib/sonic.i"
 	@echo "... lib/sonic.s"
+	@echo "... lib/weight.o"
+	@echo "... lib/weight.i"
+	@echo "... lib/weight.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
