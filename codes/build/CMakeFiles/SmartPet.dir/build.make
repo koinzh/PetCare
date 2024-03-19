@@ -158,6 +158,7 @@ SmartPet: CMakeFiles/SmartPet.dir/lib/sonic.cpp.o
 SmartPet: CMakeFiles/SmartPet.dir/lib/motor.cpp.o
 SmartPet: CMakeFiles/SmartPet.dir/lib/weight.cpp.o
 SmartPet: CMakeFiles/SmartPet.dir/build.make
+SmartPet: ../external/LinkSDK/output/lib/libaiot.a
 SmartPet: /home/pi/WiringPi/wiringPi/libwiringPi.so.2.70
 SmartPet: CMakeFiles/SmartPet.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Desktop/PetCare/codes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable SmartPet"

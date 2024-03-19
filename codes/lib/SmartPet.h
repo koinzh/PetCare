@@ -1,6 +1,12 @@
 #ifndef SMARTPET_H
 #define SMARTPET_H
 
+// 引入SDK的头文件
+#include "aiot_state_api.h"
+#include "aiot_sysdep_api.h"
+#include "aiot_mqtt_api.h"
+#include "aiot_dm_api.h"
+
 #include "sonic.h"
 #include "motor.h"
 #include  "weight.h"
@@ -12,7 +18,14 @@ public:
     
     // 开始SmartPet的操作。
     void run();
+    void *mqtt_handle = NULL;
+    void *dm_handle = NULL;
 
+     ~SmartPet();
+
+    void initializeIotSdk(); // 初始化SDK
+    void deinitializeIotSdk(); // 清理SDK资源
+    void reportDistance(float distance); // 上报距离信息
 private:
     WeightSensor::Hx711Args weightArgs; 
     UltrasonicSensor sensor; // 超声波传感器对象
