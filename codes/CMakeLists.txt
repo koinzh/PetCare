@@ -17,7 +17,7 @@ if(NOT MAKE_RESULT EQUAL "0")
     message(FATAL_ERROR "Building LinkSDK failed with ${MAKE_RESULT}")
 endif()
 
-include_directories(${LINKSDK_DIR}/include)
+include_directories(${LINKSDK_DIR}/output/include)
 include_directories(${CMAKE_SOURCE_DIR}/lib)
 set(SOURCE_FILES
     main.cpp
@@ -29,6 +29,7 @@ set(SOURCE_FILES
     ../lib/sonic.cpp
     ../lib/motor.cpp
     ../lib/weight.cpp
+
     
 )
 add_library(link_sdk STATIC IMPORTED)
