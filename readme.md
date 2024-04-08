@@ -36,16 +36,25 @@ This is an example of how to list things you need to use the software and how to
   sudo apt-get install cmake 
   ```
 
-* wiringPi
+* pigpio
   ```sh
-  git clone https://github.com/WiringPi/WiringPi
+  git clone https://github.com/joan2937/pigpio
   ```
   ```
-  cd WiringPi
+  cd pigpio
   ```
   ```
-  sudo ./build
+  sudo apt update
+  sudo apt full-upgrade
   ```
+  ```
+  make
+  sudo make install
+  ```
+  ```
+  sudo pigpiod
+  ```
+
   
 * Clone the project
   ```sh
