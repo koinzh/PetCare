@@ -74,6 +74,8 @@ void Motor::nextStep() {
 
 
 
+
+
 /*
 In this revised version of the Motor class, forward and rollback methods now use gpioSetTimerFuncEx to control the motor steps. The stepTimerCallback is called at the specified interval, calling Motor::nextStep to advance the motor's steps in the specified direction. The motor stops automatically after completing the desired number of steps, thanks to the check in nextStep.
 */

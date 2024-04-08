@@ -1,23 +1,27 @@
+#ifndef SMARTPET_MOTOR_H
+#define SMARTPET_MOTOR_H
 
-#ifndef SMARTPET_MOTOR_TEST
-#define SMARTPET_MOTOR_TEST
-
-
-#include <wiringPi.h>
-#include <cstdio>
-
-class motor{
-
+class Motor {
 public:
-#define IN1  0    // GPIO11
-#define IN2  1    // GPIO12
-#define IN3  2    // GPIO13
-#define IN4  3    // GPIO15
+    Motor(int in1, int in2, int in3, int in4); // 构造函数
+    ~Motor(); // Destructor
+    void initialize(); // Explicit initialization method
+    void setStep(int step); 
+    void forward(int t, int steps);
+    void stop();
+    void rollback(int t, int steps);
+    void nextStep(); 
 
-    static void SetStep(int a, int b, int c, int d);
-    static void Forward(int t, int steps);
-    static void Stop();
-    static void Rollback(int t, int steps);
+private:
+    int IN1; // 存储引脚配置
+    int IN2;
+    int IN3;
+    int IN4;
+    int currentStep; // 当前步骤
+    int totalSteps; // 总步骤
+    int stepCount; // 步骤计数
+    int direction; // 方向
 };
 
-#endif 
+#endif // SMARTPET_MOTOR_H
+

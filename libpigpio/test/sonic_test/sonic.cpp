@@ -1,35 +1,42 @@
 #include "sonic.h"
+#include <pigpio.h>
+#include <iostream>
 
-UltrasonicSensor::UltrasonicSensor(int trig, int echo) {
-    this->trig = trig;
-    this->echo = echo;
-    wiringPiSetup();
+// Callback function to handle echo pin changes
+void echoCallback(int gpio, int level, uint32_t tick, void *user) {
+    UltrasonicSensor* sensor = reinterpret_cast<UltrasonicSensor*>(user);
+    sensor->echoResponse(gpio, level, tick);
+}
+
+UltrasonicSensor::UltrasonicSensor(int trigger, int echo) : trig(trigger), echo(echo), distance(0.0), startTime(0), endTime(0) {
+    gpioSetMode(trig, PI_OUTPUT);
+    gpioSetMode(echo, PI_INPUT);
+    gpioSetAlertFuncEx(echo, echoCallback, this);
+}
+
+UltrasonicSensor::~UltrasonicSensor() {
+    // Clean up if needed
 }
 
 void UltrasonicSensor::initialize() {
-    pinMode(trig, OUTPUT);
-    pinMode(echo, INPUT);
+    // Additional initialization if necessary
 }
 
-long UltrasonicSensor::timeMicroseconds() {
-    struct timeval tv;
-    gettimeofday(&tv, NULL);
-    return tv.tv_sec * 1000000 + tv.tv_usec;
+void UltrasonicSensor::sendTriggerPulse() {
+    gpioWrite(trig, 1);
+    gpioDelay(10); // Delay for 10 microseconds
+    gpioWrite(trig, 0);
+}
+
+void UltrasonicSensor::echoResponse(int gpio, int level, uint32_t tick) {
+    if (level == 1) {
+        startTime = tick;
+    } else if (level == 0) {
+        endTime = tick;
+        distance = (endTime - startTime) / 58.0;
+    }
 }
 
 float UltrasonicSensor::measureDistance() {
-    digitalWrite(trig, LOW);
-    delayMicroseconds(2);
-    digitalWrite(trig, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(trig, LOW);
-
-    while(digitalRead(echo) == LOW);
-    long startTime = timeMicroseconds();
-    while(digitalRead(echo) == HIGH);
-    long travelTime = timeMicroseconds() - startTime;
-
-    // Speed of sound in air (in cm/microsecond)
-    float speedOfSound = 340.0 / 10000;
-    return (travelTime * speedOfSound) / 2;
+    return distance;
 }
