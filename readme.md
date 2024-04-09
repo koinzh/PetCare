@@ -1,4 +1,7 @@
-icons
+
+[![4-Contributor](https://img.shields.io/badge/Contributors%20-4-brightgreen.svg?style=flat-square)](https://github.com/koinzh/PetCare/graphs/contributors)     [![License](https://img.shields.io/badge/License%20-MIT-red.svg?style=flat-square)](https://github.com/koinzh/PetCare/blob/main/LICENSE) 
+[![Stars](https://img.shields.io/badge/Stars%20-0-yellow.svg?style=flat-square)](https://github.com/koinzh/PetCare/stargazers) 
+[![Fork](https://img.shields.io/badge/Fork%20-0-blue.svg?style=flat-square)](https://github.com/koinzh/PetCare/forks) 
 
 # Demo
 link
