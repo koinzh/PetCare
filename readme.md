@@ -15,7 +15,12 @@ description
 
 
 # Equipment
-description
+* Raspberry Pi 3B+ 
+* Ultrasonic sensor (HC-SR04)
+* Weight sensor (HX711)
+* Step motor (28BYJ-48)
+* potato chip bucket  
+* plastic bottle
 
 # Circuit Diagram
 link
