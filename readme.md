@@ -11,7 +11,7 @@ Full version video and Follow us on:
 
 # Introduction
 description 
-
+This project is the course design of real-time embedded system. In this course, we are the team 7. When pets-owners leave home for a long time, feeding pets with food and water is a big problem. So we make an automatic pet feeder to help people feed their pets when they are busy. The design used raspberry PI to make an automatic feeder, real-time monitoring of pet movement and food. An application can collect the feeding records. This project can realize intelligent feeding, protecting the health of pets.
 
 
 # Equipment
@@ -19,8 +19,10 @@ description
 * Ultrasonic sensor (HC-SR04)
 * Weight sensor (HX711)
 * Step motor (28BYJ-48)
-* potato chip bucket  
-* plastic bottle
+* Water pump
+* Water pipes
+* Paper boxes  
+* Plastic bottles
 
 # Circuit Diagram
 link
