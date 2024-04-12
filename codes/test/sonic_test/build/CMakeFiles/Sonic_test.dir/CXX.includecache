@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/UltrasonicSensor.h
+functional
+-
+mutex
+-
+condition_variable
+-
+pigpio.h
+/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/pigpio.h
+
+/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/sonic.cpp
+UltrasonicSensor.h
+/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/UltrasonicSensor.h
+iostream
+-
+thread
+-
+
+/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/sonicmain.cpp
+UltrasonicSensor.h
+/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/UltrasonicSensor.h
+iostream
+-
+signal.h
+-
+atomic
+-
+csignal
+-
+
