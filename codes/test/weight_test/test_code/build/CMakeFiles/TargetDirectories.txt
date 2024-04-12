@@ -1,0 +1,3 @@
+/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/weight/build/CMakeFiles/rebuild_cache.dir
+/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/weight/build/CMakeFiles/edit_cache.dir
+/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/weight/build/CMakeFiles/Weight_test.dir
