@@ -11,7 +11,7 @@ Full version video and Follow us on:
 
 # Introduction
 description 
-This project is the course design of real-time embedded system. In this course, we are the team 7. When pets-owners leave home for a long time, feeding pets with food and water is a big problem. So we make an automatic pet feeder to help people feed their pets when they are busy. The design used raspberry PI to make an automatic feeder, real-time monitoring of pet movement and food. An application can collect the feeding records. This project can realize intelligent feeding, protecting the health of pets.
+This project is the course design of real-time embedded system. In this course, we are the team 7. When pets-owners leave home for a long time, feeding pets with food and water is a big problem. So we make an automatic pet feeder to help people feed their pets when they are busy. The design used raspberry PI to make an automatic feeder, real-time monitoring of pet movement and food. Upload the feeding records to aliyun cloud server. This project can realize intelligent feeding, protecting the health of pets.
 
 
 # Equipment
@@ -32,7 +32,7 @@ The ultrasonic sensor detects the distance to the pet and when the pet is close,
 
 The weight sensor detects the weight of the food in the bowl. When the food weight is less than 10 grams, the motor is started to rotate the baffle to replenish the food. When the food weight is greater than 50 grams, the motor rotates backward. There will be a 4-hour cooling time after starting feeding for the first time. The machine can only add food three times within 24 hours.
 
-The water level sensor detects the level of water in the container. When the water level is less than 10 cm, start the water pump to draw water from the water storage tank and add it to the water feeding container. The water pump runs for 5 seconds.
+The water level sensor detects the level of water in the container. When the water level is less than 10 cm, start the water pump to draw water from the water storage tank and add it to the water feeding container. The water pump runs for 1 seconds.
 
 # Get Started
 This is an example of how to list things you need to use the software and how to install them.
