@@ -1,27 +1,31 @@
-#ifndef SMARTPET_WEIGHT_H
-#define SMARTPET_WEIGHT_H
+#ifndef WEIGHTSENSOR_H
+#define WEIGHTSENSOR_H
 
-#include <wiringPi.h>
+#include <atomic>
+#include <thread>
+#include <pigpio.h>
 
 class WeightSensor {
 public:
-    struct Hx711Args {
-        int SCK;
-        int SDA;
-        int EN;
-        int calibration;
-        float coefficient; // 标定系数
-        int weight;
-        unsigned long value;
+    WeightSensor(int SCK, int SDA, int calibration, float coefficient);
+    ~WeightSensor();
+    void start();
+    void stop();
+    int getLatestWeight() const;
 
-        
-    };
+    static WeightSensor* instance;  // 添加一个静态实例指针
 
-    static void setPin(Hx711Args *value);
-    static void initPin(Hx711Args *value);
-    static void start(Hx711Args *value);
-    static int setup(Hx711Args *value);
-    static void loop(Hx711Args *value);
+private:
+    int SCK, SDA;
+    int calibration;
+    float coefficient;
+    std::atomic<bool> running;
+    std::atomic<int> latestWeight;
+    std::thread weightThread;
+
+    void triggerRead();
+    int readWeight();
+    int readRawWeight();
 };
 
-#endif // SMARTPET_WEIGHT_H
+#endif // WEIGHTSENSOR_H

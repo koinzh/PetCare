@@ -1,56 +1,67 @@
 #include "weight.h"
-#include <wiringPi.h>
-#include <stdio.h>
-#include <cmath>
+#include <iostream>
 
-void WeightSensor::setPin(Hx711Args *value) {
-    value->EN = 1;
-    value->coefficient = 1010.27f; // 使用浮点数，这是根据称重校准得到的数据
+WeightSensor* WeightSensor::instance = nullptr;
+
+WeightSensor::WeightSensor(int SCK, int SDA, int calibration, float coefficient)
+    : SCK(SCK), SDA(SDA), calibration(calibration), coefficient(coefficient), running(false), latestWeight(0) {
+    gpioInitialise();
+    gpioSetMode(SCK, PI_OUTPUT);
+    gpioSetMode(SDA, PI_INPUT);
+    gpioWrite(SCK, PI_LOW);
+    instance = this;  // 在构造函数中设置实例指针
 }
 
-void WeightSensor::initPin(Hx711Args *value) {
-    pinMode(value->SCK, OUTPUT);
-    pinMode(value->SDA, INPUT);
-    pullUpDnControl(value->SDA, PUD_UP);
+WeightSensor::~WeightSensor() {
+    stop();
+    gpioTerminate();
+    instance = nullptr;  // 清除实例指针
 }
 
-void WeightSensor::start(Hx711Args *value) {
-    int i;
-    digitalWrite(value->SCK, LOW);
-    while (digitalRead(value->SCK));
-    value->value = 0;
-    while (digitalRead(value->SDA));
-    delay(100);
+void WeightSensor::start() {
+    running = true;
+    gpioSetAlertFunc(SDA, [](int gpio, int level, uint32_t tick) {
+        if (level == 0 && WeightSensor::instance) {  // 确保实例有效
+            WeightSensor::instance->triggerRead();
+        }
+    });
+}
 
-    for (i = 0; i < 24; i++) {
-        digitalWrite(value->SCK, HIGH);
-        delayMicroseconds(1);
-        value->value = value->value * 2;
+void WeightSensor::stop() {
+    running = false;
+    gpioSetAlertFunc(SDA, nullptr);  // 移除中断处理函数
+}
 
-        digitalWrite(value->SCK, LOW);
-        delayMicroseconds(1);
+int WeightSensor::getLatestWeight() const {
+    return latestWeight.load();
+}
 
-        if (digitalRead(value->SDA))
-            value->value = value->value + 1;
+void WeightSensor::triggerRead() {
+    if (!running) return;
+    latestWeight.store(readWeight());  // 原子更新最新重量
+}
+
+int WeightSensor::readWeight() {
+    int rawWeight = readRawWeight();
+    return static_cast<int>(1.52 * (static_cast<float>(rawWeight - calibration) / coefficient) - 76);
+}
+
+int WeightSensor::readRawWeight() {
+    long value = 0;
+    for (int i = 0; i < 24; ++i) {
+        gpioWrite(SCK, PI_HIGH);
+        gpioWrite(SCK, PI_LOW);
+        if (gpioRead(SDA)) {
+            value = (value << 1) + 1;
+        } else {
+            value <<= 1;
+        }
     }
-    digitalWrite(value->SCK, HIGH);
-    delayMicroseconds(1);
-    digitalWrite(value->SCK, LOW);
+    gpioWrite(SCK, PI_HIGH); // Additional pulse to end the read
+    gpioWrite(SCK, PI_LOW);
 
-    float rawWeight = (float)(value->value - value->calibration + 50) / value->coefficient;
-    i = (int)round((rawWeight - 289) * 2); // 手动计算
-    if (i < 5000) value->weight = i;
-    printf("Weight: %d g\n", value->weight);
-}
-
-int WeightSensor::setup(Hx711Args *value) {
-    if (wiringPiSetup() == -1) return 1;
-    setPin(value);
-    initPin(value);
-    return 0;
-}
-
-void WeightSensor::loop(Hx711Args *value) {
-    while(1)
-        WeightSensor::start(value);
+    if (value & 0x800000) {
+        value |= ~0xFFFFFF;
+    }
+    return static_cast<int>(value);
 }

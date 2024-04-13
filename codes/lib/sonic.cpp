@@ -1,45 +1,61 @@
-#include "sonic.h"
-#include <wiringPi.h>
-#include <sys/time.h>
+#include "UltrasonicSensor.h"
+#include <iostream>
 #include <thread>
-#include <chrono>
 
-UltrasonicSensor::UltrasonicSensor(int trigger, int echo) : trig(trigger), echo(echo) {
-    wiringPiSetup(); 
-    pinMode(trig, OUTPUT);
-    pinMode(echo, INPUT);
+UltrasonicSensor::UltrasonicSensor(int triggerPin, int echoPin) : trigPin(triggerPin), echoPin(echoPin), running(false) {
+    gpioSetMode(trigPin, PI_OUTPUT);
+    gpioSetMode(echoPin, PI_INPUT);
+    gpioSetAlertFuncEx(echoPin, echoInterrupt, this);
 }
 
-
-
-long UltrasonicSensor::timeMicroseconds() {
-    struct timeval tv;
-    gettimeofday(&tv, nullptr); 
-    return tv.tv_sec * 1000000 + tv.tv_usec;
+UltrasonicSensor::~UltrasonicSensor() {
+    stop();
+    gpioSetAlertFuncEx(echoPin, nullptr, nullptr);
 }
 
-void UltrasonicSensor::measureDistanceAsync(const std::function<void(float)>& callback) {
-    std::thread([this, callback]() {
-        while (true) { // 持续测量距离
-            digitalWrite(trig, LOW);
-            std::this_thread::sleep_for(std::chrono::microseconds(2));
-            digitalWrite(trig, HIGH);
-            std::this_thread::sleep_for(std::chrono::microseconds(10));
-            digitalWrite(trig, LOW);
-
-            while (digitalRead(echo) == LOW);
-            long startTime = timeMicroseconds();
-            while (digitalRead(echo) == HIGH);
-            long travelTime = timeMicroseconds() - startTime;
-
-            float speedOfSound = 340.29 / 10000; 
-            float distance = (travelTime * speedOfSound) / 2;
-
-            if (callback) {
-                callback(distance);
-            }
-
-            std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 在连续测量之间稍作延时
+void UltrasonicSensor::startMeasurement() {
+    running = true;
+    std::thread([&]() {
+        while (running) {
+            triggerPulse();
+            waitForEcho();
         }
-    }).detach(); // 在后台线程中运行，不阻塞主线程
+    }).detach();
+}
+
+void UltrasonicSensor::stop() {
+    running = false;
+    cv.notify_all();
+}
+
+void UltrasonicSensor::setDistanceCallback(std::function<void(float)> callback) {
+    distanceCallback = callback;
+}
+
+void UltrasonicSensor::triggerPulse() {
+    // 使用 gpioTrigger 来生成一个10微秒的高电平脈衝，無需手動處理低电平和高电平的轉換
+    gpioTrigger(trigPin, 10, 1); // 第一个参数是GPIO pin，第二个参数是脉冲长度（微秒），第三个参数是脉冲电平（1表示高电平）
+}
+
+
+void UltrasonicSensor::waitForEcho() {
+    std::unique_lock<std::mutex> lock(mtx);
+    if (!cv.wait_for(lock, std::chrono::milliseconds(100), [this] { return this->endTime > this->startTime; })) {
+        std::cerr << "Timeout waiting for echo response." << std::endl;
+    } else {
+        if (distanceCallback) {
+            float distance = (endTime - startTime) * 0.0343 / 2.0;
+            distanceCallback(distance);
+        }
+    }
+}
+
+void UltrasonicSensor::echoInterrupt(int gpio, int level, uint32_t tick, void* user) {
+    UltrasonicSensor* sensor = static_cast<UltrasonicSensor*>(user);
+    if (level == 1) {
+        sensor->startTime = tick;
+    } else if (level == 0) {
+        sensor->endTime = tick;
+        sensor->cv.notify_one();
+    }
 }

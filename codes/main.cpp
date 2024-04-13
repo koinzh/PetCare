@@ -1,20 +1,70 @@
-#include "SmartPet.h"
-#include <wiringPi.h>
+#include "UltrasonicSensor.h"
+#include "MotorController.h"
+#include "weight.h"
+#include "pigpio.h"
+#include <iostream>
+#include <csignal>
+#include <atomic>
+#include <mutex>
+
+std::atomic<bool> terminateProgram{false};
+std::mutex mtx;  // 互斥锁用于保护共享变量
+
+void signalHandler(int signum) {
+    terminateProgram = true;
+}
 
 int main() {
-    wiringPiSetup(); // 初始化wiringPi并设置GPIO引脚
-    int trigPin = 28; 
-    int echoPin = 29;
-    int in1 = 0;
-    int in2 = 1;
-    int in3 = 2;
-    int in4 = 3;
-    int SCK = 4;
-    int SDA = 5;
+    if (gpioInitialise() < 0) {
+        std::cerr << "GPIO初始化失败。" << std::endl;
+        return 1;
+    }
 
+    signal(SIGINT, signalHandler);
+    MotorController motor(17, 18, 27, 22);
+    UltrasonicSensor sensor(20, 21);
+    WeightSensor weightSensor(23, 24, 233084, 1010.27f);  // 初始化重量传感器
 
-    SmartPet pet(trigPin, echoPin, in1, in2, in3, in4, SCK, SDA);
-    pet.run();
+    int countBelowThreshold = 0;
+    const int thresholdCount = 3; // 连续3次距离小于10cm且重量小于300g
+    const float thresholdDistance = 10.0;  // 距离阈值
+    const float minValidDistance = 0.1;  // 最小有效距离
+    const int weightThreshold = 300;  // 重量阈值
 
+    weightSensor.start();  // 开始重量监测
+
+    sensor.setDistanceCallback([&](float distance) {
+        std::lock_guard<std::mutex> lock(mtx);  // 使用互斥锁保护共享数据
+        std::cout << "Distance: " << distance << " cm, Weight: " << weightSensor.getLatestWeight() << " g" << std::endl;
+        if (distance < minValidDistance || distance > 500) {  // 忽略无效读数
+            return;
+        }
+
+        int currentWeight = weightSensor.getLatestWeight();
+        if (distance < thresholdDistance && currentWeight < weightThreshold) {
+            countBelowThreshold++;
+            if (countBelowThreshold >= thresholdCount && !motor.hasRotatedForward()) {
+                std::cout << "Triggering forward rotation." << std::endl;
+                motor.rotateForward(128);  // 正转128步约等于90度
+            }
+        } else {
+            countBelowThreshold = 0; // 重置计数器
+        }
+
+        // 当重量达到或超过300g，且电机之前已经正转过
+        if (currentWeight >= weightThreshold && motor.hasRotatedForward()) {
+            std::cout << "Triggering reverse rotation." << std::endl;
+            motor.rotateBackward(128);  // 反转128步约等于90度
+        }
+    });
+
+    sensor.startMeasurement();
+
+    while (!terminateProgram) {}
+
+    weightSensor.stop();
+    sensor.stop();
+    gpioTerminate();
+    std::cout << "程序优雅地终止了。" << std::endl;
     return 0;
 }

@@ -142,33 +142,6 @@ SmartPet/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/build
 .PHONY : SmartPet/fast
 
-lib/SmartPet.o: lib/SmartPet.cpp.o
-
-.PHONY : lib/SmartPet.o
-
-# target to build an object file
-lib/SmartPet.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/SmartPet.cpp.o
-.PHONY : lib/SmartPet.cpp.o
-
-lib/SmartPet.i: lib/SmartPet.cpp.i
-
-.PHONY : lib/SmartPet.i
-
-# target to preprocess a source file
-lib/SmartPet.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/SmartPet.cpp.i
-.PHONY : lib/SmartPet.cpp.i
-
-lib/SmartPet.s: lib/SmartPet.cpp.s
-
-.PHONY : lib/SmartPet.s
-
-# target to generate assembly for a file
-lib/SmartPet.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/SmartPet.cpp.s
-.PHONY : lib/SmartPet.cpp.s
-
 lib/motor.o: lib/motor.cpp.o
 
 .PHONY : lib/motor.o
@@ -286,9 +259,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SmartPet"
-	@echo "... lib/SmartPet.o"
-	@echo "... lib/SmartPet.i"
-	@echo "... lib/SmartPet.s"
 	@echo "... lib/motor.o"
 	@echo "... lib/motor.i"
 	@echo "... lib/motor.s"
