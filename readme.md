@@ -48,7 +48,7 @@ Full version video and Follow us on:
 * Plastic bottles
 
 ## Circuit Diagram
-link
+![circuit diagram](docs/circuit-diagram.png)
 
 ## Repository Structure
 Here's an overview of what each directory and file in this repository is used for:
@@ -155,42 +155,47 @@ MIT license
 
 ## Developer Log
 
-### Date: 2024-03-05
+<details>
+  <summary>Click to expand!</summary>
 
-Creat petCare repository. Updated readme file and license in main branch. Creat develop branch.
+  * Date: 2024-03-05
 
-### Date: 2024-03-06
+    Creat petCare repository. Updated readme file and license in main branch. Creat develop branch.
 
-Upload code of weight sensor in develop branch.
+  * Date: 2024-03-06
 
-### Date: 2024-03-07
+    Upload code of weight sensor in develop branch.
 
-Updated cmake file. Upload code of ultrasonic sensor and motor.
+  * Date: 2024-03-07
 
-### Date: 2024-03-12
+    Updated cmake file. Upload code of ultrasonic sensor and motor.
 
-Change wring to pigpio of motor and ultrasonic sensor.
+  * Date: 2024-03-12
 
-### Date: 2024-03-17
+    Change wring to pigpio of motor and ultrasonic sensor.
 
-Updated code of weight sensor.
+  * Date: 2024-03-17
 
-### Date: 2024-03-19
+    Updated code of weight sensor.
 
-Set aliyun cloud server.
+  * Date: 2024-03-19
 
-### Date: 2024-04-09
+    Set aliyun cloud server.
 
-Updated code of sensor test (thread, callback, io).
+  * Date: 2024-04-09
 
-### Date: 2024-04-10
+    Updated code of sensor test (thread, callback, io).
 
-Updated readme file (introduction, equipment, object).
+  * Date: 2024-04-10
 
-### Date: 2024-04-12
+    Updated readme file (introduction, equipment, object).
 
-Merge branch newlib to branch develop.
+  * Date: 2024-04-12
 
-### Date: 2024-04-13
+    Merge branch newlib to branch develop.
 
-Debug test code for sensor.
+  * Date: 2024-04-13
+
+    Debug test code for sensor.
+
+</details>
