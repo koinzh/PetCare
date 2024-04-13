@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/Weight_test.dir/main.cpp.o CMakeFiles/Weight_test.dir/lib/weight.cpp.o -o Weight_test  -lpigpio -lpthread -lpthread 

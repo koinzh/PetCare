@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/water.h
+chrono
+-
+pigpio.h
+-
+
+/home/pi/Desktop/PetCare/codes/test/water_test/lib/water.cpp
+water.h
+/home/pi/Desktop/PetCare/codes/test/water_test/lib/water.h
+iostream
+-
+
+/home/pi/Desktop/PetCare/codes/test/water_test/lib/water.h
+chrono
+-
+pigpio.h
+-
+
+/home/pi/Desktop/PetCare/codes/test/water_test/main.cpp
+water.h
+/home/pi/Desktop/PetCare/codes/test/water_test/water.h
+iostream
+-
+chrono
+-
+pigpio.h
+-
+

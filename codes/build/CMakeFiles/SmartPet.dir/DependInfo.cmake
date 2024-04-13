@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pi/Desktop/PetCare/codes/lib/motor.cpp" "/home/pi/Desktop/PetCare/codes/build/CMakeFiles/SmartPet.dir/lib/motor.cpp.o"
   "/home/pi/Desktop/PetCare/codes/lib/sonic.cpp" "/home/pi/Desktop/PetCare/codes/build/CMakeFiles/SmartPet.dir/lib/sonic.cpp.o"
+  "/home/pi/Desktop/PetCare/codes/lib/water.cpp" "/home/pi/Desktop/PetCare/codes/build/CMakeFiles/SmartPet.dir/lib/water.cpp.o"
   "/home/pi/Desktop/PetCare/codes/lib/weight.cpp" "/home/pi/Desktop/PetCare/codes/build/CMakeFiles/SmartPet.dir/lib/weight.cpp.o"
   "/home/pi/Desktop/PetCare/codes/main.cpp" "/home/pi/Desktop/PetCare/codes/build/CMakeFiles/SmartPet.dir/main.cpp.o"
   )

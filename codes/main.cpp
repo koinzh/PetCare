@@ -1,6 +1,7 @@
-#include "UltrasonicSensor.h"
-#include "MotorController.h"
+#include "sonic.h"
+#include "motor.h"
 #include "weight.h"
+#include "water.h"
 #include "pigpio.h"
 #include <iostream>
 #include <csignal>
@@ -23,19 +24,30 @@ int main() {
     signal(SIGINT, signalHandler);
     MotorController motor(17, 18, 27, 22);
     UltrasonicSensor sensor(20, 21);
-    WeightSensor weightSensor(23, 24, 233084, 1010.27f);  // 初始化重量传感器
+    WaterLevelController waterLevelController(6, 5);//new for water
+    WeightSensor weightSensor(23, 24, 233084, 1010.27f);  // 初始化
+    
 
     int countBelowThreshold = 0;
     const int thresholdCount = 3; // 连续3次距离小于10cm且重量小于300g
     const float thresholdDistance = 10.0;  // 距离阈值
     const float minValidDistance = 0.1;  // 最小有效距离
-    const int weightThreshold = 300;  // 重量阈值
+    const int weightThreshold = 150;  // 重量阈值
 
     weightSensor.start();  // 开始重量监测
+    
+    //water
+    std::thread waterThread([&](){
+       while (!terminateProgram.load()) {
+        
+        }
+    });//water 
+    
 
     sensor.setDistanceCallback([&](float distance) {
         std::lock_guard<std::mutex> lock(mtx);  // 使用互斥锁保护共享数据
         std::cout << "Distance: " << distance << " cm, Weight: " << weightSensor.getLatestWeight() << " g" << std::endl;
+    //   std::cout << " Weight: " << weightSensor.getLatestWeight() << " g" << std::endl;
         if (distance < minValidDistance || distance > 500) {  // 忽略无效读数
             return;
         }
@@ -44,7 +56,7 @@ int main() {
         if (distance < thresholdDistance && currentWeight < weightThreshold) {
             countBelowThreshold++;
             if (countBelowThreshold >= thresholdCount && !motor.hasRotatedForward()) {
-                std::cout << "Triggering forward rotation." << std::endl;
+                std::cout << "Triggering Forward rotation." << std::endl;
                 motor.rotateForward(128);  // 正转128步约等于90度
             }
         } else {
@@ -53,15 +65,26 @@ int main() {
 
         // 当重量达到或超过300g，且电机之前已经正转过
         if (currentWeight >= weightThreshold && motor.hasRotatedForward()) {
-            std::cout << "Triggering reverse rotation." << std::endl;
+            std::cout << "Triggering Reverse rotation." << std::endl;
             motor.rotateBackward(128);  // 反转128步约等于90度
+            motor.reset();  // 在电机反转后重置状态，允许再次正转
         }
     });
 
     sensor.startMeasurement();
 
-    while (!terminateProgram) {}
+    while (!terminateProgram) {
+        
+       ////test code 
+       // std::cout << "Motor hasRotatedForward: " << motor.hasRotatedForward() << std::endl;
+      //  std::this_thread::sleep_for(std::chrono::seconds(1)); // 每秒打印一次状态
+        //testcode
+    }
+        
+        
+        
 
+    waterThread.join();//water
     weightSensor.stop();
     sensor.stop();
     gpioTerminate();

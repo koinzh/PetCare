@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib
+CXX_INCLUDES = -I/home/pi/Desktop/PetCare/codes/test/sonic_test/lib
 
 CXX_FLAGS = -std=gnu++11
 

@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-../lib/MotorController.h
+../lib/motor.h
 atomic
 -
 pigpio.h
 ../lib/pigpio.h
 
-../lib/UltrasonicSensor.h
+../lib/sonic.h
 functional
 -
 mutex
@@ -21,6 +21,14 @@ condition_variable
 -
 pigpio.h
 ../lib/pigpio.h
+
+../lib/water.h
+chrono
+-
+pigpio.h
+-
+iostream
+-
 
 ../lib/weight.h
 atomic
@@ -30,13 +38,31 @@ thread
 pigpio.h
 -
 
-/home/pi/Desktop/PetCare/codes/lib/MotorController.h
+/home/pi/Desktop/PetCare/codes/lib/motor.cpp
+motor.h
+/home/pi/Desktop/PetCare/codes/lib/motor.h
+chrono
+-
+thread
+-
+functional
+-
+
+/home/pi/Desktop/PetCare/codes/lib/motor.h
 atomic
 -
 pigpio.h
 /home/pi/Desktop/PetCare/codes/lib/pigpio.h
 
-/home/pi/Desktop/PetCare/codes/lib/UltrasonicSensor.h
+/home/pi/Desktop/PetCare/codes/lib/sonic.cpp
+sonic.h
+/home/pi/Desktop/PetCare/codes/lib/sonic.h
+iostream
+-
+thread
+-
+
+/home/pi/Desktop/PetCare/codes/lib/sonic.h
 functional
 -
 mutex
@@ -46,22 +72,16 @@ condition_variable
 pigpio.h
 /home/pi/Desktop/PetCare/codes/lib/pigpio.h
 
-/home/pi/Desktop/PetCare/codes/lib/motor.cpp
-MotorController.h
-/home/pi/Desktop/PetCare/codes/lib/MotorController.h
+/home/pi/Desktop/PetCare/codes/lib/water.cpp
+water.h
+/home/pi/Desktop/PetCare/codes/lib/water.h
+
+/home/pi/Desktop/PetCare/codes/lib/water.h
 chrono
 -
-thread
+pigpio.h
 -
-functional
--
-
-/home/pi/Desktop/PetCare/codes/lib/sonic.cpp
-UltrasonicSensor.h
-/home/pi/Desktop/PetCare/codes/lib/UltrasonicSensor.h
 iostream
--
-thread
 -
 
 /home/pi/Desktop/PetCare/codes/lib/weight.cpp
@@ -79,12 +99,14 @@ pigpio.h
 -
 
 /home/pi/Desktop/PetCare/codes/main.cpp
-UltrasonicSensor.h
-/home/pi/Desktop/PetCare/codes/UltrasonicSensor.h
-MotorController.h
-/home/pi/Desktop/PetCare/codes/MotorController.h
+sonic.h
+/home/pi/Desktop/PetCare/codes/sonic.h
+motor.h
+/home/pi/Desktop/PetCare/codes/motor.h
 weight.h
 /home/pi/Desktop/PetCare/codes/weight.h
+water.h
+/home/pi/Desktop/PetCare/codes/water.h
 pigpio.h
 /home/pi/Desktop/PetCare/codes/pigpio.h
 iostream

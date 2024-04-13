@@ -10,7 +10,7 @@ find_library(PIGPIO_THREAD pthread /usr/local/lib)
 include_directories(${CMAKE_SOURCE_DIR}/lib)
 
 set(SOURCE_FILES
-    ../lib/sonicmain.cpp
+    ../main.cpp
      ../lib/sonic.cpp
      ..//lib/UltrasonicSensor.h
     

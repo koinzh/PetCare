@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SmartPet.dir/lib/motor.cpp.o"
   "CMakeFiles/SmartPet.dir/lib/sonic.cpp.o"
+  "CMakeFiles/SmartPet.dir/lib/water.cpp.o"
   "CMakeFiles/SmartPet.dir/lib/weight.cpp.o"
   "CMakeFiles/SmartPet.dir/main.cpp.o"
   "SmartPet"

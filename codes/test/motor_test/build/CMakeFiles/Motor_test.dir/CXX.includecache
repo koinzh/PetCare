@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/MotorController.h
+atomic
+-
+pigpio.h
+../lib/pigpio.h
+
+/home/pi/Desktop/PetCare/codes/test/motor_test/main.cpp
+MotorController.h
+/home/pi/Desktop/PetCare/codes/test/motor_test/MotorController.h
+pigpio.h
+/home/pi/Desktop/PetCare/codes/test/motor_test/pigpio.h
+iostream
+-
+

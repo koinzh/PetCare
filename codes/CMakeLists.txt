@@ -12,11 +12,13 @@ include_directories(${CMAKE_SOURCE_DIR}/lib)
 set(SOURCE_FILES
     ../main.cpp
      ../lib/motor.cpp
-      ../lib/MotorController.h
+      ../lib/motor.h
        ../lib/sonic.cpp
-        ../lib/UltrasonicSensor.h
+        ../lib/sonic.h
          ../lib/weight.h
           ../lib/weight.cpp
+          ../lib/water.h
+          ../lib/water.cpp
     
 )
 

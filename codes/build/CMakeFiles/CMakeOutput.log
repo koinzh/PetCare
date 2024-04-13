@@ -28,10 +28,10 @@ The CXX compiler identification is GNU, found in "/home/pi/Desktop/PetCare/codes
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_d5bb8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d5bb8.dir/build.make CMakeFiles/cmTC_d5bb8.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_c0f21/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c0f21.dir/build.make CMakeFiles/cmTC_c0f21.dir/build
 gmake[1]: Entering directory '/home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc   -v -o CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c
+Building C object CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -v -o CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 Target: aarch64-linux-gnu
@@ -39,8 +39,8 @@ Configured with: ../src/configure -v --with-pkgversion='Debian 10.2.1-6' --with-
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
 gcc version 10.2.1 20210110 (Debian 10.2.1-6) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
- /usr/lib/gcc/aarch64-linux-gnu/10/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -o /tmp/ccHsXLhR.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+ /usr/lib/gcc/aarch64-linux-gnu/10/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -o /tmp/ccy0BqN0.s
 GNU C17 (Debian 10.2.1-6) version 10.2.1 20210110 (aarch64-linux-gnu)
 	compiled by GNU C version 10.2.1 20210110, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.0, isl version isl-0.23-GMP
 
@@ -60,15 +60,15 @@ GNU C17 (Debian 10.2.1-6) version 10.2.1 20210110 (aarch64-linux-gnu)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 09f7dee817ee0ac81dbfe2e711a5f862
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
- as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o /tmp/ccHsXLhR.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o /tmp/ccy0BqN0.s
 GNU assembler version 2.35.2 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.35.2
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
-Linking C executable cmTC_d5bb8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5bb8.dir/link.txt --verbose=1
-/usr/bin/cc  -v -rdynamic CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o -o cmTC_d5bb8 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+Linking C executable cmTC_c0f21
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0f21.dir/link.txt --verbose=1
+/usr/bin/cc  -v -rdynamic CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o -o cmTC_c0f21 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper
@@ -79,9 +79,9 @@ Supported LTO compression algorithms: zlib zstd
 gcc version 10.2.1 20210110 (Debian 10.2.1-6) 
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d5bb8' '-mlittle-endian' '-mabi=lp64'
- /usr/lib/gcc/aarch64-linux-gnu/10/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjD74Gg.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_d5bb8 /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/10 -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/10/../../.. CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/10/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d5bb8' '-mlittle-endian' '-mabi=lp64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c0f21' '-mlittle-endian' '-mabi=lp64'
+ /usr/lib/gcc/aarch64-linux-gnu/10/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper -plugin-opt=-fresolution=/tmp/cceUQbVs.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_c0f21 /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/10 -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/10/../../.. CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/10/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c0f21' '-mlittle-endian' '-mabi=lp64'
 gmake[1]: Leaving directory '/home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp'
 
 
@@ -105,10 +105,10 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_d5bb8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d5bb8.dir/build.make CMakeFiles/cmTC_d5bb8.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_c0f21/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c0f21.dir/build.make CMakeFiles/cmTC_c0f21.dir/build]
   ignore line: [gmake[1]: Entering directory '/home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c]
+  ignore line: [Building C object CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [Target: aarch64-linux-gnu]
@@ -116,8 +116,8 @@ Parsed C implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib zstd]
   ignore line: [gcc version 10.2.1 20210110 (Debian 10.2.1-6) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/10/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -o /tmp/ccHsXLhR.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/10/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -o /tmp/ccy0BqN0.s]
   ignore line: [GNU C17 (Debian 10.2.1-6) version 10.2.1 20210110 (aarch64-linux-gnu)]
   ignore line: [	compiled by GNU C version 10.2.1 20210110  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.0  isl version isl-0.23-GMP]
   ignore line: []
@@ -137,15 +137,15 @@ Parsed C implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 09f7dee817ee0ac81dbfe2e711a5f862]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o /tmp/ccHsXLhR.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o /tmp/ccy0BqN0.s]
   ignore line: [GNU assembler version 2.35.2 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.35.2]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [Linking C executable cmTC_d5bb8]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5bb8.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc  -v -rdynamic CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o -o cmTC_d5bb8 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [Linking C executable cmTC_c0f21]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0f21.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc  -v -rdynamic CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o -o cmTC_c0f21 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper]
@@ -156,13 +156,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 10.2.1 20210110 (Debian 10.2.1-6) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d5bb8' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /usr/lib/gcc/aarch64-linux-gnu/10/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjD74Gg.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_d5bb8 /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/10 -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/10/../../.. CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/10/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c0f21' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /usr/lib/gcc/aarch64-linux-gnu/10/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper -plugin-opt=-fresolution=/tmp/cceUQbVs.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_c0f21 /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/10 -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/10/../../.. CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/10/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/10/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/10/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccjD74Gg.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cceUQbVs.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -181,7 +181,7 @@ Parsed C implicit link information from above output:
     arg [--fix-cortex-a53-843419] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_d5bb8] ==> ignore
+    arg [cmTC_c0f21] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o] ==> ignore
@@ -193,7 +193,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/aarch64-linux-gnu/10/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/10/../../..]
-    arg [CMakeFiles/cmTC_d5bb8.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_c0f21.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -223,10 +223,10 @@ Parsed C implicit link information from above output:
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_a2cbe/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a2cbe.dir/build.make CMakeFiles/cmTC_a2cbe.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_d61c0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d61c0.dir/build.make CMakeFiles/cmTC_d61c0.dir/build
 gmake[1]: Entering directory '/home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++   -v -o CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp
+Building CXX object CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++   -v -o CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 Target: aarch64-linux-gnu
@@ -234,8 +234,8 @@ Configured with: ../src/configure -v --with-pkgversion='Debian 10.2.1-6' --with-
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
 gcc version 10.2.1 20210110 (Debian 10.2.1-6) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
- /usr/lib/gcc/aarch64-linux-gnu/10/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -o /tmp/cchj99hP.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+ /usr/lib/gcc/aarch64-linux-gnu/10/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -o /tmp/ccVtGmtZ.s
 GNU C++14 (Debian 10.2.1-6) version 10.2.1 20210110 (aarch64-linux-gnu)
 	compiled by GNU C version 10.2.1 20210110, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.0, isl version isl-0.23-GMP
 
@@ -259,15 +259,15 @@ GNU C++14 (Debian 10.2.1-6) version 10.2.1 20210110 (aarch64-linux-gnu)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 7ff9b3e77ba341f92c3fc11acba5d5f9
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
- as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o /tmp/cchj99hP.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccVtGmtZ.s
 GNU assembler version 2.35.2 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.35.2
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
-Linking CXX executable cmTC_a2cbe
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2cbe.dir/link.txt --verbose=1
-/usr/bin/c++  -v -rdynamic CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_a2cbe 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+Linking CXX executable cmTC_d61c0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d61c0.dir/link.txt --verbose=1
+/usr/bin/c++  -v -rdynamic CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_d61c0 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper
@@ -278,9 +278,9 @@ Supported LTO compression algorithms: zlib zstd
 gcc version 10.2.1 20210110 (Debian 10.2.1-6) 
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a2cbe' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
- /usr/lib/gcc/aarch64-linux-gnu/10/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccAOLoOh.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_a2cbe /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/10 -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/10/../../.. CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/10/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a2cbe' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d61c0' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+ /usr/lib/gcc/aarch64-linux-gnu/10/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqCd1Zs.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_d61c0 /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/10 -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/10/../../.. CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/10/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d61c0' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
 gmake[1]: Leaving directory '/home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp'
 
 
@@ -310,10 +310,10 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_a2cbe/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a2cbe.dir/build.make CMakeFiles/cmTC_a2cbe.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_d61c0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d61c0.dir/build.make CMakeFiles/cmTC_d61c0.dir/build]
   ignore line: [gmake[1]: Entering directory '/home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Building CXX object CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [Target: aarch64-linux-gnu]
@@ -321,8 +321,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib zstd]
   ignore line: [gcc version 10.2.1 20210110 (Debian 10.2.1-6) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/10/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -o /tmp/cchj99hP.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/10/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -o /tmp/ccVtGmtZ.s]
   ignore line: [GNU C++14 (Debian 10.2.1-6) version 10.2.1 20210110 (aarch64-linux-gnu)]
   ignore line: [	compiled by GNU C version 10.2.1 20210110  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.0  isl version isl-0.23-GMP]
   ignore line: []
@@ -346,15 +346,15 @@ Parsed CXX implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 7ff9b3e77ba341f92c3fc11acba5d5f9]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o /tmp/cchj99hP.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccVtGmtZ.s]
   ignore line: [GNU assembler version 2.35.2 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.35.2]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [Linking CXX executable cmTC_a2cbe]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2cbe.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++  -v -rdynamic CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_a2cbe ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [Linking CXX executable cmTC_d61c0]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d61c0.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++  -v -rdynamic CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_d61c0 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper]
@@ -365,13 +365,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 10.2.1 20210110 (Debian 10.2.1-6) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a2cbe' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /usr/lib/gcc/aarch64-linux-gnu/10/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccAOLoOh.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_a2cbe /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/10 -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/10/../../.. CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/10/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d61c0' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /usr/lib/gcc/aarch64-linux-gnu/10/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqCd1Zs.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_d61c0 /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/10 -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/10/../../.. CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/10/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/10/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/10/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccAOLoOh.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccqCd1Zs.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -390,7 +390,7 @@ Parsed CXX implicit link information from above output:
     arg [--fix-cortex-a53-843419] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_a2cbe] ==> ignore
+    arg [cmTC_d61c0] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o] ==> ignore
@@ -402,7 +402,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/aarch64-linux-gnu/10/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/10/../../..]
-    arg [CMakeFiles/cmTC_a2cbe.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_d61c0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -428,13 +428,13 @@ Parsed CXX implicit link information from above output:
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_cacc7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cacc7.dir/build.make CMakeFiles/cmTC_cacc7.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_a85ef/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a85ef.dir/build.make CMakeFiles/cmTC_a85ef.dir/build
 gmake[1]: 进入目录“/home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_cacc7.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_cacc7.dir/CheckIncludeFile.c.o -c /home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_cacc7
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cacc7.dir/link.txt --verbose=1
-/usr/bin/cc -rdynamic CMakeFiles/cmTC_cacc7.dir/CheckIncludeFile.c.o -o cmTC_cacc7 
+Building C object CMakeFiles/cmTC_a85ef.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_a85ef.dir/CheckIncludeFile.c.o -c /home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_a85ef
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a85ef.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_a85ef.dir/CheckIncludeFile.c.o -o cmTC_a85ef 
 gmake[1]: 离开目录“/home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp”
 
 
@@ -442,13 +442,13 @@ gmake[1]: 离开目录“/home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp”
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_d4586/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d4586.dir/build.make CMakeFiles/cmTC_d4586.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_321a6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_321a6.dir/build.make CMakeFiles/cmTC_321a6.dir/build
 gmake[1]: 进入目录“/home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_d4586.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_d4586.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.18/Modules/CheckFunctionExists.c
-Linking C executable cmTC_d4586
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4586.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_d4586.dir/CheckFunctionExists.c.o -o cmTC_d4586  -lpthread 
+Building C object CMakeFiles/cmTC_321a6.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_321a6.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.18/Modules/CheckFunctionExists.c
+Linking C executable cmTC_321a6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_321a6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_321a6.dir/CheckFunctionExists.c.o -o cmTC_321a6  -lpthread 
 gmake[1]: 离开目录“/home/pi/Desktop/PetCare/codes/build/CMakeFiles/CMakeTmp”
 
 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/UltrasonicSensor.h
+../lib/UltrasonicSensor.h
 functional
 -
 mutex
@@ -14,19 +14,29 @@ mutex
 condition_variable
 -
 pigpio.h
-/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/pigpio.h
+../lib/pigpio.h
 
-/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/sonic.cpp
+/home/pi/Desktop/PetCare/codes/test/sonic_test/lib/UltrasonicSensor.h
+functional
+-
+mutex
+-
+condition_variable
+-
+pigpio.h
+/home/pi/Desktop/PetCare/codes/test/sonic_test/lib/pigpio.h
+
+/home/pi/Desktop/PetCare/codes/test/sonic_test/lib/sonic.cpp
 UltrasonicSensor.h
-/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/UltrasonicSensor.h
+/home/pi/Desktop/PetCare/codes/test/sonic_test/lib/UltrasonicSensor.h
 iostream
 -
 thread
 -
 
-/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/sonicmain.cpp
+/home/pi/Desktop/PetCare/codes/test/sonic_test/main.cpp
 UltrasonicSensor.h
-/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/UltrasonicSensor.h
+/home/pi/Desktop/PetCare/codes/test/sonic_test/UltrasonicSensor.h
 iostream
 -
 signal.h

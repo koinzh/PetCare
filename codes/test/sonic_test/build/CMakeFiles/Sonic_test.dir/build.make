@@ -62,10 +62,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic
+CMAKE_SOURCE_DIR = /home/pi/Desktop/PetCare/codes/test/sonic_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build
+CMAKE_BINARY_DIR = /home/pi/Desktop/PetCare/codes/test/sonic_test/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Sonic_test.dir/depend.make
@@ -76,47 +76,47 @@ include CMakeFiles/Sonic_test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Sonic_test.dir/flags.make
 
-CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.o: CMakeFiles/Sonic_test.dir/flags.make
-CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.o: ../lib/sonicmain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.o -c /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/sonicmain.cpp
+CMakeFiles/Sonic_test.dir/main.cpp.o: CMakeFiles/Sonic_test.dir/flags.make
+CMakeFiles/Sonic_test.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/PetCare/codes/test/sonic_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Sonic_test.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Sonic_test.dir/main.cpp.o -c /home/pi/Desktop/PetCare/codes/test/sonic_test/main.cpp
 
-CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/sonicmain.cpp > CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.i
+CMakeFiles/Sonic_test.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sonic_test.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Desktop/PetCare/codes/test/sonic_test/main.cpp > CMakeFiles/Sonic_test.dir/main.cpp.i
 
-CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/sonicmain.cpp -o CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.s
+CMakeFiles/Sonic_test.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sonic_test.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Desktop/PetCare/codes/test/sonic_test/main.cpp -o CMakeFiles/Sonic_test.dir/main.cpp.s
 
 CMakeFiles/Sonic_test.dir/lib/sonic.cpp.o: CMakeFiles/Sonic_test.dir/flags.make
 CMakeFiles/Sonic_test.dir/lib/sonic.cpp.o: ../lib/sonic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Sonic_test.dir/lib/sonic.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Sonic_test.dir/lib/sonic.cpp.o -c /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/sonic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/PetCare/codes/test/sonic_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Sonic_test.dir/lib/sonic.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Sonic_test.dir/lib/sonic.cpp.o -c /home/pi/Desktop/PetCare/codes/test/sonic_test/lib/sonic.cpp
 
 CMakeFiles/Sonic_test.dir/lib/sonic.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sonic_test.dir/lib/sonic.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/sonic.cpp > CMakeFiles/Sonic_test.dir/lib/sonic.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Desktop/PetCare/codes/test/sonic_test/lib/sonic.cpp > CMakeFiles/Sonic_test.dir/lib/sonic.cpp.i
 
 CMakeFiles/Sonic_test.dir/lib/sonic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sonic_test.dir/lib/sonic.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/lib/sonic.cpp -o CMakeFiles/Sonic_test.dir/lib/sonic.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Desktop/PetCare/codes/test/sonic_test/lib/sonic.cpp -o CMakeFiles/Sonic_test.dir/lib/sonic.cpp.s
 
 # Object files for target Sonic_test
 Sonic_test_OBJECTS = \
-"CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.o" \
+"CMakeFiles/Sonic_test.dir/main.cpp.o" \
 "CMakeFiles/Sonic_test.dir/lib/sonic.cpp.o"
 
 # External object files for target Sonic_test
 Sonic_test_EXTERNAL_OBJECTS =
 
-Sonic_test: CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.o
+Sonic_test: CMakeFiles/Sonic_test.dir/main.cpp.o
 Sonic_test: CMakeFiles/Sonic_test.dir/lib/sonic.cpp.o
 Sonic_test: CMakeFiles/Sonic_test.dir/build.make
 Sonic_test: /usr/lib/libpigpio.so
 Sonic_test: /usr/lib/aarch64-linux-gnu/libpthread.so
 Sonic_test: CMakeFiles/Sonic_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Sonic_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Desktop/PetCare/codes/test/sonic_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Sonic_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Sonic_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -129,6 +129,6 @@ CMakeFiles/Sonic_test.dir/clean:
 .PHONY : CMakeFiles/Sonic_test.dir/clean
 
 CMakeFiles/Sonic_test.dir/depend:
-	cd /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build/CMakeFiles/Sonic_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/Desktop/PetCare/codes/test/sonic_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/Desktop/PetCare/codes/test/sonic_test /home/pi/Desktop/PetCare/codes/test/sonic_test /home/pi/Desktop/PetCare/codes/test/sonic_test/build /home/pi/Desktop/PetCare/codes/test/sonic_test/build /home/pi/Desktop/PetCare/codes/test/sonic_test/build/CMakeFiles/Sonic_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Sonic_test.dir/depend
 

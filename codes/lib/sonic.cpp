@@ -1,4 +1,4 @@
-#include "UltrasonicSensor.h"
+#include "sonic.h"
 #include <iostream>
 #include <thread>
 

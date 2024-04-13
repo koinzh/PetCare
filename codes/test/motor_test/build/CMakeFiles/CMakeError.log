@@ -1,22 +1,22 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_e9124/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e9124.dir/build.make CMakeFiles/cmTC_e9124.dir/build
-gmake[1]: 进入目录“/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_e9124.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_e9124.dir/src.c.o -c /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_e9124
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9124.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD -rdynamic CMakeFiles/cmTC_e9124.dir/src.c.o -o cmTC_e9124 
-/usr/bin/ld: CMakeFiles/cmTC_e9124.dir/src.c.o: in function `main':
+Run Build Command(s):/usr/bin/gmake cmTC_c55c1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c55c1.dir/build.make CMakeFiles/cmTC_c55c1.dir/build
+gmake[1]: 进入目录“/home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_c55c1.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_c55c1.dir/src.c.o -c /home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c55c1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c55c1.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD -rdynamic CMakeFiles/cmTC_c55c1.dir/src.c.o -o cmTC_c55c1 
+/usr/bin/ld: CMakeFiles/cmTC_c55c1.dir/src.c.o: in function `main':
 src.c:(.text+0x34): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x3c): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x44): undefined reference to `pthread_cancel'
 /usr/bin/ld: src.c:(.text+0x50): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [CMakeFiles/cmTC_e9124.dir/build.make:106：cmTC_e9124] 错误 1
-gmake[1]: 离开目录“/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build/CMakeFiles/CMakeTmp”
-gmake: *** [Makefile:140：cmTC_e9124/fast] 错误 2
+gmake[1]: *** [CMakeFiles/cmTC_c55c1.dir/build.make:106：cmTC_c55c1] 错误 1
+gmake[1]: 离开目录“/home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles/CMakeTmp”
+gmake: *** [Makefile:140：cmTC_c55c1/fast] 错误 2
 
 
 Source file was:
@@ -41,20 +41,20 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_864fc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_864fc.dir/build.make CMakeFiles/cmTC_864fc.dir/build
-gmake[1]: 进入目录“/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_864fc.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_864fc.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.18/Modules/CheckFunctionExists.c
-Linking C executable cmTC_864fc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_864fc.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_864fc.dir/CheckFunctionExists.c.o -o cmTC_864fc  -lpthreads 
+Run Build Command(s):/usr/bin/gmake cmTC_62c12/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_62c12.dir/build.make CMakeFiles/cmTC_62c12.dir/build
+gmake[1]: 进入目录“/home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_62c12.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_62c12.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.18/Modules/CheckFunctionExists.c
+Linking C executable cmTC_62c12
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62c12.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_62c12.dir/CheckFunctionExists.c.o -o cmTC_62c12  -lpthreads 
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [CMakeFiles/cmTC_864fc.dir/build.make:106：cmTC_864fc] 错误 1
-gmake[1]: 离开目录“/home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build/CMakeFiles/CMakeTmp”
-gmake: *** [Makefile:140：cmTC_864fc/fast] 错误 2
+gmake[1]: *** [CMakeFiles/cmTC_62c12.dir/build.make:106：cmTC_62c12] 错误 1
+gmake[1]: 离开目录“/home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles/CMakeTmp”
+gmake: *** [Makefile:140：cmTC_62c12/fast] 错误 2
 
 
 

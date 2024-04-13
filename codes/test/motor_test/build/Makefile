@@ -67,24 +67,13 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic
+CMAKE_SOURCE_DIR = /home/pi/Desktop/PetCare/codes/test/motor_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build
+CMAKE_BINARY_DIR = /home/pi/Desktop/PetCare/codes/test/motor_test/build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -97,11 +86,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build/CMakeFiles /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles /home/pi/Desktop/PetCare/codes/test/motor_test/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/motorsonicweight11122/final!!!!!!!!/Test/sonic/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -130,71 +130,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Sonic_test
+# Target rules for targets named Motor_test
 
 # Build rule for target.
-Sonic_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Sonic_test
-.PHONY : Sonic_test
+Motor_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Motor_test
+.PHONY : Motor_test
 
 # fast build rule for target.
-Sonic_test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sonic_test.dir/build.make CMakeFiles/Sonic_test.dir/build
-.PHONY : Sonic_test/fast
+Motor_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Motor_test.dir/build.make CMakeFiles/Motor_test.dir/build
+.PHONY : Motor_test/fast
 
-lib/sonic.o: lib/sonic.cpp.o
+lib/motor.o: lib/motor.cpp.o
 
-.PHONY : lib/sonic.o
-
-# target to build an object file
-lib/sonic.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sonic_test.dir/build.make CMakeFiles/Sonic_test.dir/lib/sonic.cpp.o
-.PHONY : lib/sonic.cpp.o
-
-lib/sonic.i: lib/sonic.cpp.i
-
-.PHONY : lib/sonic.i
-
-# target to preprocess a source file
-lib/sonic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sonic_test.dir/build.make CMakeFiles/Sonic_test.dir/lib/sonic.cpp.i
-.PHONY : lib/sonic.cpp.i
-
-lib/sonic.s: lib/sonic.cpp.s
-
-.PHONY : lib/sonic.s
-
-# target to generate assembly for a file
-lib/sonic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sonic_test.dir/build.make CMakeFiles/Sonic_test.dir/lib/sonic.cpp.s
-.PHONY : lib/sonic.cpp.s
-
-lib/sonicmain.o: lib/sonicmain.cpp.o
-
-.PHONY : lib/sonicmain.o
+.PHONY : lib/motor.o
 
 # target to build an object file
-lib/sonicmain.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sonic_test.dir/build.make CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.o
-.PHONY : lib/sonicmain.cpp.o
+lib/motor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Motor_test.dir/build.make CMakeFiles/Motor_test.dir/lib/motor.cpp.o
+.PHONY : lib/motor.cpp.o
 
-lib/sonicmain.i: lib/sonicmain.cpp.i
+lib/motor.i: lib/motor.cpp.i
 
-.PHONY : lib/sonicmain.i
+.PHONY : lib/motor.i
 
 # target to preprocess a source file
-lib/sonicmain.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sonic_test.dir/build.make CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.i
-.PHONY : lib/sonicmain.cpp.i
+lib/motor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Motor_test.dir/build.make CMakeFiles/Motor_test.dir/lib/motor.cpp.i
+.PHONY : lib/motor.cpp.i
 
-lib/sonicmain.s: lib/sonicmain.cpp.s
+lib/motor.s: lib/motor.cpp.s
 
-.PHONY : lib/sonicmain.s
+.PHONY : lib/motor.s
 
 # target to generate assembly for a file
-lib/sonicmain.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sonic_test.dir/build.make CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.s
-.PHONY : lib/sonicmain.cpp.s
+lib/motor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Motor_test.dir/build.make CMakeFiles/Motor_test.dir/lib/motor.cpp.s
+.PHONY : lib/motor.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Motor_test.dir/build.make CMakeFiles/Motor_test.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Motor_test.dir/build.make CMakeFiles/Motor_test.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Motor_test.dir/build.make CMakeFiles/Motor_test.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -204,13 +204,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Sonic_test"
-	@echo "... lib/sonic.o"
-	@echo "... lib/sonic.i"
-	@echo "... lib/sonic.s"
-	@echo "... lib/sonicmain.o"
-	@echo "... lib/sonicmain.i"
-	@echo "... lib/sonicmain.s"
+	@echo "... Motor_test"
+	@echo "... lib/motor.o"
+	@echo "... lib/motor.i"
+	@echo "... lib/motor.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

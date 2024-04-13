@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Sonic_test.dir/lib/sonic.cpp.o"
-  "CMakeFiles/Sonic_test.dir/lib/sonicmain.cpp.o"
+  "CMakeFiles/Sonic_test.dir/main.cpp.o"
   "Sonic_test"
   "Sonic_test.pdb"
 )

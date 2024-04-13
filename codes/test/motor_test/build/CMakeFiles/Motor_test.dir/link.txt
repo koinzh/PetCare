@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/Motor_test.dir/main.cpp.o CMakeFiles/Motor_test.dir/lib/motor.cpp.o -o Motor_test  -lpigpio -lpthread -lpthread 
