@@ -31,24 +31,26 @@ In this system, the ultrasonic sensor detects the distance to the pet, and the f
 
 The water sensor detects the level of water in the container. When the water level is less than the setting height, start the water pump to draw water from the water storage tank and add it to the water feeding container. The water pump runs for 1 second. 
 
+
 ## Demo
 link
 
 Full version video and Follow us on: 
 * [TikTok](https://www.tiktok.com/@smartpetcaresyste?_t=8kk3llkyQGP&_r=1)
 
+
 # Equipment
 * Raspberry Pi 3B+ 
 * Ultrasonic sensor (HC-SR04)
 * Weight sensor (HX711)
 * Step motor (28BYJ-48)
+* Water sensor
 * Water pump
-* Water pipes
-* Paper boxes  
-* Plastic bottles
+
 
 ## Circuit Diagram
 ![circuit diagram](docs/circuit-diagram.png)
+
 
 ## Repository Structure
 Here's an overview of what each directory and file in this repository is used for:
@@ -56,6 +58,8 @@ Here's an overview of what each directory and file in this repository is used fo
 - `/code`: Contains all the source code.
 - `/docs`: Documentation files for the project.
 - `readme.md`: The xx for installing the project.
+- `License`: The MIT license for the project.
+
 
 ## Get Started
 The default branch of this repository is `main`, which contains the latest stable version of the project. 
@@ -129,20 +133,22 @@ This is an example of how to list things you need to use the software and how to
     ```
 </details>
 
+
 ## Version Control
 check the repository to see the avilable version
 
+
 ## License
 MIT license
+
 
 ## Acknowledgement
 * [Cmake](https://cmake.org/cmake/help/latest/guide/tutorial/index.html#a-basic-starting-point-step-1)
 
 * [README templete](https://github.com/othneildrew/Best-README-Template)
 
-<!--* [Thread](https://github.com/berndporr/cppThread/blob/master/CppThread.h)-->
-
 * [C++](https://www.learncpp.com/)
+
 
 ## Contact us 
 * Yutong Wang https://github.com/BigWYT
@@ -196,6 +202,6 @@ MIT license
 
   * Date: 2024-04-13
 
-    Debug test code for sensor.
+    Debug test code for weight sensor.
 
 </details>
