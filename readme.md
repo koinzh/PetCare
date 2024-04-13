@@ -3,27 +3,29 @@
 [![Stars](https://img.shields.io/badge/Stars%20-0-yellow.svg?style=flat-square)](https://github.com/koinzh/PetCare/stargazers) 
 [![Fork](https://img.shields.io/badge/Fork%20-0-blue.svg?style=flat-square)](https://github.com/koinzh/PetCare/forks) 
 
-# Table of Contents
+# PetCare
+
+## Contents
 - [Demo](#demo)
 - [Introduction](#introduction)
 - [Equipment](#equipment)
-- [Circuit Diagram](#circuitdiagram)
+- [Circuit Diagram](#circuit-diagram)
 - [Object](#object)
-- [Get started](#getstarted)
-- [Version Control](#versioncontrorl)
+- [Get started](#get-started)
+- [Version Control](#version-controrl)
 - [License](#license)
 - [Acknowledgement](#acknowledgement)
-- [Contact us](#contactus)
-- [Developer Log](#developerlog)
+- [Contact us](#contact-us)
+- [Developer Log](#developer-log)
 
 
-# Demo
+## Demo
 link
 
 Full version video and Follow us on: 
 * [TikTok](https://www.tiktok.com/@smartpetcaresyste?_t=8kk3llkyQGP&_r=1)
 
-# Introduction
+## Introduction
 This project is the course design of real-time embedded system. In this course, we are the team 7. 
 
 When pets-owners leave home for a long time, feeding pets with food and water is a big problem. So we make an automatic pet feeder to help people feed their pets when they are busy. The design used raspberry PI to make an automatic feeder, real-time monitoring of pet movement and food. Upload the feeding records to aliyun cloud server. This project can realize intelligent feeding, protecting the health of pets.
@@ -39,17 +41,17 @@ When pets-owners leave home for a long time, feeding pets with food and water is
 * Paper boxes  
 * Plastic bottles
 
-# Circuit Diagram
+## Circuit Diagram
 link
 
-# Object
+## Object
 The ultrasonic sensor detects the distance to the pet and when the pet is close, the feeder starts working.
 
-The weight sensor detects the weight of the food in the bowl. When the food weight is less than 10 grams, the motor is started to rotate the baffle to replenish the food. When the food weight is greater than 50 grams, the motor rotates backward. There will be a 4-hour cooling time after starting feeding for the first time. The machine can only add food three times within 24 hours.
+In this system, the ultrasonic sensor detects the distance to the pet, and the feeder starts working when the pet is close. The weight sensor detects the weight of the food in the bowl. When the food weight is less than 300 grams, the motor starts to rotate the baffle 90 degrees to replenish the food. When the food weight is greater than 300 grams, the motor rotates backward. 
 
-The water level sensor detects the level of water in the container. When the water level is less than 10 cm, start the water pump to draw water from the water storage tank and add it to the water feeding container. The water pump runs for 1 seconds.
+The water sensor detects the level of water in the container. When the water level is less than the setting height, start the water pump to draw water from the water storage tank and add it to the water feeding container. The water pump runs for 1 second. 
 
-# Get Started
+## Get Started
 This is an example of how to list things you need to use the software and how to install them.
 
 * Git
@@ -115,13 +117,13 @@ This is an example of how to list things you need to use the software and how to
   ./PetCare
   ```
  -->
-# Version Control
+## Version Control
 check the repository to see the avilabe version
 
-# License
+## License
 MIT license
 
-# Acknowledgement
+## Acknowledgement
 * [Cmake](https://cmake.org/cmake/help/latest/guide/tutorial/index.html#a-basic-starting-point-step-1)
 
 * [README templete](https://github.com/othneildrew/Best-README-Template)
@@ -130,7 +132,7 @@ MIT license
 
 * [C++](https://www.learncpp.com/)
 
-# Contact us 
+## Contact us 
 * Yutong Wang https://github.com/BigWYT
 * Bowen Ren https://github.com/midori-jojo
 * Zhiyu Ren https://github.com/rasethna
@@ -139,7 +141,7 @@ MIT license
 * TikTok Link: https://www.tiktok.com/@smartpetcaresyste?_t=8kk3llkyQGP&_r=1
 
 
-# Developer Log
+## Developer Log
 
 ### Date: 2024-03-05
 
@@ -197,3 +199,6 @@ Merge branch newlib to branch develop.
 
 [Commit Hash](10a1d3392eb5221e733013856561ed79f58a3863)
 
+### Date: 2024-04-13
+
+Debug test code for sensor.
