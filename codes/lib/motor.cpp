@@ -1,5 +1,4 @@
 #include "motor.h"
-//#include "Timer.h"
 #include <chrono>
 #include <thread>
 #include <functional>
@@ -25,7 +24,7 @@ MotorController::~MotorController() {
 }
 */
 
-
+/*
 void delayedExecution(int delayMilliseconds, std::function<void()> func) {
     std::thread([delayMilliseconds, func]() {
         std::this_thread::sleep_for(std::chrono::milliseconds(delayMilliseconds));
@@ -33,7 +32,7 @@ void delayedExecution(int delayMilliseconds, std::function<void()> func) {
     }).detach();
 }
 
-
+*/
 
 
 void MotorController::rotateForward(int steps) {

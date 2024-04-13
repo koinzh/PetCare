@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(SmartPet)
+project(PetCare)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -10,7 +10,7 @@ find_library(PIGPIO_THREAD pthread /usr/local/lib)
 include_directories(${CMAKE_SOURCE_DIR}/lib)
 
 set(SOURCE_FILES
-    ../main.cpp
+    ../main_ask_data.cpp
      ../lib/motor.cpp
       ../lib/motor.h
        ../lib/sonic.cpp
@@ -22,5 +22,5 @@ set(SOURCE_FILES
     
 )
 
-add_executable(SmartPet ${SOURCE_FILES})
-target_link_libraries(SmartPet ${PIGPIO_LIBRARY} ${PIGPIO_THREAD} ${CMAKE_THREAD_LIBS_INIT})
+add_executable(PetCare ${SOURCE_FILES})
+target_link_libraries(PetCare ${PIGPIO_LIBRARY} ${PIGPIO_THREAD} ${CMAKE_THREAD_LIBS_INIT})

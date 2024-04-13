@@ -1,3 +1,3 @@
 /home/pi/Desktop/PetCare/codes/build/CMakeFiles/rebuild_cache.dir
 /home/pi/Desktop/PetCare/codes/build/CMakeFiles/edit_cache.dir
-/home/pi/Desktop/PetCare/codes/build/CMakeFiles/SmartPet.dir
+/home/pi/Desktop/PetCare/codes/build/CMakeFiles/PetCare.dir
