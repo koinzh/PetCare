@@ -33,8 +33,8 @@ void UltrasonicSensor::setDistanceCallback(std::function<void(float)> callback) 
 }
 
 void UltrasonicSensor::triggerPulse() {
-    // 使用 gpioTrigger 来生成一个10微秒的高电平脈衝，無需手動處理低电平和高电平的轉換
-    gpioTrigger(trigPin, 10, 1); // 第一个参数是GPIO pin，第二个参数是脉冲长度（微秒），第三个参数是脉冲电平（1表示高电平）
+    // generate a 10 microsecond high level pulse
+    gpioTrigger(trigPin, 10, 1); 
 }
 
 

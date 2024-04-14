@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/PetCare.dir/lib/sonic.cpp.o"
   "CMakeFiles/PetCare.dir/lib/water.cpp.o"
   "CMakeFiles/PetCare.dir/lib/weight.cpp.o"
-  "CMakeFiles/PetCare.dir/main_ask_data.cpp.o"
+  "CMakeFiles/PetCare.dir/src/main.cpp.o"
   "PetCare"
   "PetCare.pdb"
 )

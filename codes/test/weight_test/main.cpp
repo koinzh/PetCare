@@ -4,7 +4,7 @@
 #include <thread>
 
 int main() {
-    WeightSensor sensor(23, 24, 233084, 1010.27f); // 初始化传感器
+    WeightSensor sensor(23, 24, 31055, 15.4866f); // 初始化传感器
     sensor.start();  // 开始传感器数据读取
 
     for (int i = 0; i < 10; ++i) {

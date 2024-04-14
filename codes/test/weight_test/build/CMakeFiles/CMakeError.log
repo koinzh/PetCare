@@ -1,22 +1,22 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/pi/Desktop/PetCare/codes/test/weight_test/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_199a8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_199a8.dir/build.make CMakeFiles/cmTC_199a8.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_db12a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_db12a.dir/build.make CMakeFiles/cmTC_db12a.dir/build
 gmake[1]: ½øÈëÄ¿Â¼¡°/home/pi/Desktop/PetCare/codes/test/weight_test/build/CMakeFiles/CMakeTmp¡±
-Building C object CMakeFiles/cmTC_199a8.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_199a8.dir/src.c.o -c /home/pi/Desktop/PetCare/codes/test/weight_test/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_199a8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_199a8.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD -rdynamic CMakeFiles/cmTC_199a8.dir/src.c.o -o cmTC_199a8 
-/usr/bin/ld: CMakeFiles/cmTC_199a8.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_db12a.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_db12a.dir/src.c.o -c /home/pi/Desktop/PetCare/codes/test/weight_test/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_db12a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db12a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD -rdynamic CMakeFiles/cmTC_db12a.dir/src.c.o -o cmTC_db12a 
+/usr/bin/ld: CMakeFiles/cmTC_db12a.dir/src.c.o: in function `main':
 src.c:(.text+0x34): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x3c): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x44): undefined reference to `pthread_cancel'
 /usr/bin/ld: src.c:(.text+0x50): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [CMakeFiles/cmTC_199a8.dir/build.make:106£ºcmTC_199a8] ´íÎó 1
+gmake[1]: *** [CMakeFiles/cmTC_db12a.dir/build.make:106£ºcmTC_db12a] ´íÎó 1
 gmake[1]: Àë¿ªÄ¿Â¼¡°/home/pi/Desktop/PetCare/codes/test/weight_test/build/CMakeFiles/CMakeTmp¡±
-gmake: *** [Makefile:140£ºcmTC_199a8/fast] ´íÎó 2
+gmake: *** [Makefile:140£ºcmTC_db12a/fast] ´íÎó 2
 
 
 Source file was:
@@ -43,18 +43,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/pi/Desktop/PetCare/codes/test/weight_test/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_a785c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a785c.dir/build.make CMakeFiles/cmTC_a785c.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_df267/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_df267.dir/build.make CMakeFiles/cmTC_df267.dir/build
 gmake[1]: ½øÈëÄ¿Â¼¡°/home/pi/Desktop/PetCare/codes/test/weight_test/build/CMakeFiles/CMakeTmp¡±
-Building C object CMakeFiles/cmTC_a785c.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_a785c.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.18/Modules/CheckFunctionExists.c
-Linking C executable cmTC_a785c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a785c.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_a785c.dir/CheckFunctionExists.c.o -o cmTC_a785c  -lpthreads 
+Building C object CMakeFiles/cmTC_df267.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_df267.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.18/Modules/CheckFunctionExists.c
+Linking C executable cmTC_df267
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df267.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_df267.dir/CheckFunctionExists.c.o -o cmTC_df267  -lpthreads 
 /usr/bin/ld: ÕÒ²»µ½ -lpthreads
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [CMakeFiles/cmTC_a785c.dir/build.make:106£ºcmTC_a785c] ´íÎó 1
+gmake[1]: *** [CMakeFiles/cmTC_df267.dir/build.make:106£ºcmTC_df267] ´íÎó 1
 gmake[1]: Àë¿ªÄ¿Â¼¡°/home/pi/Desktop/PetCare/codes/test/weight_test/build/CMakeFiles/CMakeTmp¡±
-gmake: *** [Makefile:140£ºcmTC_a785c/fast] ´íÎó 2
+gmake: *** [Makefile:140£ºcmTC_df267/fast] ´íÎó 2
 
 
 

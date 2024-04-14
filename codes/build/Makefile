@@ -250,32 +250,32 @@ lib/weight.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/weight.cpp.s
 .PHONY : lib/weight.cpp.s
 
-main_ask_data.o: main_ask_data.cpp.o
+src/main.o: src/main.cpp.o
 
-.PHONY : main_ask_data.o
+.PHONY : src/main.o
 
 # target to build an object file
-main_ask_data.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/main_ask_data.cpp.o
-.PHONY : main_ask_data.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main_ask_data.i: main_ask_data.cpp.i
+src/main.i: src/main.cpp.i
 
-.PHONY : main_ask_data.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main_ask_data.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/main_ask_data.cpp.i
-.PHONY : main_ask_data.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main_ask_data.s: main_ask_data.cpp.s
+src/main.s: src/main.cpp.s
 
-.PHONY : main_ask_data.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main_ask_data.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/main_ask_data.cpp.s
-.PHONY : main_ask_data.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -298,9 +298,9 @@ help:
 	@echo "... lib/weight.o"
 	@echo "... lib/weight.i"
 	@echo "... lib/weight.s"
-	@echo "... main_ask_data.o"
-	@echo "... main_ask_data.i"
-	@echo "... main_ask_data.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

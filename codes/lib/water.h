@@ -8,7 +8,7 @@
 class WaterLevelController {
 public:
 
- static WaterLevelController* instance;  // 静态实例指针
+ static WaterLevelController* instance;  
 
     WaterLevelController(int waterSensorPin, int motorPin);
     ~WaterLevelController();

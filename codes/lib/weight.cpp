@@ -1,5 +1,7 @@
 #include "weight.h"
 #include <iostream>
+#include <queue>
+
 
 WeightSensor* WeightSensor::instance = nullptr;
 
@@ -9,19 +11,19 @@ WeightSensor::WeightSensor(int SCK, int SDA, int calibration, float coefficient)
     gpioSetMode(SCK, PI_OUTPUT);
     gpioSetMode(SDA, PI_INPUT);
     gpioWrite(SCK, PI_LOW);
-    instance = this;  // 在构造函数中设置实例指针
+    instance = this;  // Set the instance pointer in the constructor.
 }
 
 WeightSensor::~WeightSensor() {
     stop();
     gpioTerminate();
-    instance = nullptr;  // 清除实例指针
+    instance = nullptr;  // Clear the instance pointer.
 }
 
 void WeightSensor::start() {
     running = true;
     gpioSetAlertFunc(SDA, [](int gpio, int level, uint32_t tick) {
-        if (level == 0 && WeightSensor::instance) {  // 确保实例有效
+        if (level == 0 && WeightSensor::instance) {  // make sure the instance is useful
             WeightSensor::instance->triggerRead();
         }
     });
@@ -29,7 +31,7 @@ void WeightSensor::start() {
 
 void WeightSensor::stop() {
     running = false;
-    gpioSetAlertFunc(SDA, nullptr);  // 移除中断处理函数
+    gpioSetAlertFunc(SDA, nullptr);  // Remove the interrupt handler function
 }
 
 int WeightSensor::getLatestWeight() const {
@@ -38,12 +40,15 @@ int WeightSensor::getLatestWeight() const {
 
 void WeightSensor::triggerRead() {
     if (!running) return;
-    latestWeight.store(readWeight());  // 原子更新最新重量
+   // int rawWeight = readWeight();
+    //updateWeightHistory(rawWeight);
+    latestWeight.store(readWeight());  // Update the latest weight
 }
 
 int WeightSensor::readWeight() {
     int rawWeight = readRawWeight();
-    return static_cast<int>(1.52 * (static_cast<float>(rawWeight - calibration) / coefficient) - 76);
+    //return static_cast<int>(1.52 * (static_cast<float>(rawWeight - calibration) / coefficient) - 76);
+    return static_cast<int>(static_cast<float>(rawWeight - calibration) / coefficient);
 }
 
 int WeightSensor::readRawWeight() {
@@ -64,4 +69,30 @@ int WeightSensor::readRawWeight() {
         value |= ~0xFFFFFF;
     }
     return static_cast<int>(value);
+}
+/*
+void WeightSensor::updateWeightHistory(int newWeight) {
+    if (weightHistory.size() >= weightHistorySize) {
+        weightHistory.pop();  // 如果队列已满，移除最老的数据
+    }
+    weightHistory.push(newWeight);  // 添加新的重量读数
+}
+
+int WeightSensor::getSmoothedWeight() {
+    if (weightHistory.empty()) return 0;
+    int sum = std::accumulate(weightHistory.begin(), weightHistory.end(), 0);
+    return sum / weightHistory.size();  // 计算并返回平均重量
+}
+*/
+void WeightSensor::updateWeightHistory(int newWeight) {
+    if (weightHistory.size() >= weightHistorySize) {
+        weightHistory.pop_front();  // 如果deque已满，移除最老的数据
+    }
+    weightHistory.push_back(newWeight);  // 添加新的重量记录
+}
+
+int WeightSensor::getSmoothedWeight() {
+    if (weightHistory.empty()) return 0;
+    int sum = std::accumulate(weightHistory.begin(), weightHistory.end(), 0);
+    return sum / weightHistory.size();  // 计算并返回平均重量
 }

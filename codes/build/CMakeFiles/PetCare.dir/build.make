@@ -76,18 +76,18 @@ include CMakeFiles/PetCare.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/PetCare.dir/flags.make
 
-CMakeFiles/PetCare.dir/main_ask_data.cpp.o: CMakeFiles/PetCare.dir/flags.make
-CMakeFiles/PetCare.dir/main_ask_data.cpp.o: ../main_ask_data.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/PetCare/codes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PetCare.dir/main_ask_data.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PetCare.dir/main_ask_data.cpp.o -c /home/pi/Desktop/PetCare/codes/main_ask_data.cpp
+CMakeFiles/PetCare.dir/src/main.cpp.o: CMakeFiles/PetCare.dir/flags.make
+CMakeFiles/PetCare.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/PetCare/codes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PetCare.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PetCare.dir/src/main.cpp.o -c /home/pi/Desktop/PetCare/codes/src/main.cpp
 
-CMakeFiles/PetCare.dir/main_ask_data.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PetCare.dir/main_ask_data.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Desktop/PetCare/codes/main_ask_data.cpp > CMakeFiles/PetCare.dir/main_ask_data.cpp.i
+CMakeFiles/PetCare.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PetCare.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Desktop/PetCare/codes/src/main.cpp > CMakeFiles/PetCare.dir/src/main.cpp.i
 
-CMakeFiles/PetCare.dir/main_ask_data.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PetCare.dir/main_ask_data.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Desktop/PetCare/codes/main_ask_data.cpp -o CMakeFiles/PetCare.dir/main_ask_data.cpp.s
+CMakeFiles/PetCare.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PetCare.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Desktop/PetCare/codes/src/main.cpp -o CMakeFiles/PetCare.dir/src/main.cpp.s
 
 CMakeFiles/PetCare.dir/lib/motor.cpp.o: CMakeFiles/PetCare.dir/flags.make
 CMakeFiles/PetCare.dir/lib/motor.cpp.o: ../lib/motor.cpp
@@ -143,7 +143,7 @@ CMakeFiles/PetCare.dir/lib/water.cpp.s: cmake_force
 
 # Object files for target PetCare
 PetCare_OBJECTS = \
-"CMakeFiles/PetCare.dir/main_ask_data.cpp.o" \
+"CMakeFiles/PetCare.dir/src/main.cpp.o" \
 "CMakeFiles/PetCare.dir/lib/motor.cpp.o" \
 "CMakeFiles/PetCare.dir/lib/sonic.cpp.o" \
 "CMakeFiles/PetCare.dir/lib/weight.cpp.o" \
@@ -152,7 +152,7 @@ PetCare_OBJECTS = \
 # External object files for target PetCare
 PetCare_EXTERNAL_OBJECTS =
 
-PetCare: CMakeFiles/PetCare.dir/main_ask_data.cpp.o
+PetCare: CMakeFiles/PetCare.dir/src/main.cpp.o
 PetCare: CMakeFiles/PetCare.dir/lib/motor.cpp.o
 PetCare: CMakeFiles/PetCare.dir/lib/sonic.cpp.o
 PetCare: CMakeFiles/PetCare.dir/lib/weight.cpp.o

@@ -13,9 +13,9 @@ CMakeFiles/PetCare.dir/lib/water.cpp.o: ../lib/water.h
 CMakeFiles/PetCare.dir/lib/weight.cpp.o: ../lib/weight.cpp
 CMakeFiles/PetCare.dir/lib/weight.cpp.o: ../lib/weight.h
 
-CMakeFiles/PetCare.dir/main_ask_data.cpp.o: ../lib/motor.h
-CMakeFiles/PetCare.dir/main_ask_data.cpp.o: ../lib/sonic.h
-CMakeFiles/PetCare.dir/main_ask_data.cpp.o: ../lib/water.h
-CMakeFiles/PetCare.dir/main_ask_data.cpp.o: ../lib/weight.h
-CMakeFiles/PetCare.dir/main_ask_data.cpp.o: ../main_ask_data.cpp
+CMakeFiles/PetCare.dir/src/main.cpp.o: ../lib/motor.h
+CMakeFiles/PetCare.dir/src/main.cpp.o: ../lib/sonic.h
+CMakeFiles/PetCare.dir/src/main.cpp.o: ../lib/water.h
+CMakeFiles/PetCare.dir/src/main.cpp.o: ../lib/weight.h
+CMakeFiles/PetCare.dir/src/main.cpp.o: ../src/main.cpp
 

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pi/Desktop/PetCare/codes/lib/sonic.cpp" "/home/pi/Desktop/PetCare/codes/build/CMakeFiles/PetCare.dir/lib/sonic.cpp.o"
   "/home/pi/Desktop/PetCare/codes/lib/water.cpp" "/home/pi/Desktop/PetCare/codes/build/CMakeFiles/PetCare.dir/lib/water.cpp.o"
   "/home/pi/Desktop/PetCare/codes/lib/weight.cpp" "/home/pi/Desktop/PetCare/codes/build/CMakeFiles/PetCare.dir/lib/weight.cpp.o"
-  "/home/pi/Desktop/PetCare/codes/main_ask_data.cpp" "/home/pi/Desktop/PetCare/codes/build/CMakeFiles/PetCare.dir/main_ask_data.cpp.o"
+  "/home/pi/Desktop/PetCare/codes/src/main.cpp" "/home/pi/Desktop/PetCare/codes/build/CMakeFiles/PetCare.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -7,7 +7,7 @@ WaterLevelController::WaterLevelController(int waterSensorPin, int motorPin)
     : waterSensorPin(waterSensorPin), motorPin(motorPin), motorRunning(false) {
     initialize();
     
-    instance = this;  // 在构造函数中设置实例指针
+    instance = this;  // Set instance pointer in the constructo
 
     
 }
@@ -15,7 +15,7 @@ WaterLevelController::WaterLevelController(int waterSensorPin, int motorPin)
 WaterLevelController::~WaterLevelController() {
     gpioTerminate();
     
-     instance = nullptr;  // 在析构函数中清除实例指针
+     instance = nullptr;  // Clear instance pointer in the destructor
      
 }
 
@@ -43,7 +43,7 @@ void WaterLevelController::initialize() {
 
 void WaterLevelController::startMotor() {
     if (!motorRunning) {
-        std::cout << "No water, activating motor..." << std::endl;
+        std::cout << "No water, activating PUMP..." << std::endl;
         gpioWrite(motorPin, PI_HIGH);
         motorStartTime = std::chrono::steady_clock::now();
         motorRunning = true;
@@ -53,7 +53,7 @@ void WaterLevelController::startMotor() {
 void WaterLevelController::stopMotor() {
     if (motorRunning) {
         gpioWrite(motorPin, PI_LOW);
-        std::cout << "Motor stopped." << std::endl;
+        std::cout << "PUMP stopped." << std::endl;
         motorRunning = false;
     }
 }

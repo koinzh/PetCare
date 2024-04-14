@@ -11,6 +11,10 @@ atomic
 -
 pigpio.h
 ../lib/pigpio.h
+atomic
+-
+pigpio.h
+../lib/pigpio.h
 
 ../lib/sonic.h
 functional
@@ -37,18 +41,22 @@ thread
 -
 pigpio.h
 -
+queue
+-
+numeric
+-
 
-/home/pi/Desktop/PetCare/codes/main_ask_data.cpp
+/home/pi/Desktop/PetCare/codes/src/main.cpp
 sonic.h
-/home/pi/Desktop/PetCare/codes/sonic.h
+/home/pi/Desktop/PetCare/codes/src/sonic.h
 motor.h
-/home/pi/Desktop/PetCare/codes/motor.h
+/home/pi/Desktop/PetCare/codes/src/motor.h
 weight.h
-/home/pi/Desktop/PetCare/codes/weight.h
+/home/pi/Desktop/PetCare/codes/src/weight.h
 water.h
-/home/pi/Desktop/PetCare/codes/water.h
+/home/pi/Desktop/PetCare/codes/src/water.h
 pigpio.h
-/home/pi/Desktop/PetCare/codes/pigpio.h
+/home/pi/Desktop/PetCare/codes/src/pigpio.h
 iostream
 -
 csignal
@@ -57,6 +65,6 @@ atomic
 -
 mutex
 -
-thread
+chrono
 -
 

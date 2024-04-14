@@ -1,3 +1,4 @@
+
 #ifndef MOTORCONTROLLER_H
 #define MOTORCONTROLLER_H
 
@@ -25,3 +26,36 @@ private:
 };
 
 #endif // MOTORCONTROLLER_H
+
+
+
+/*
+#ifndef MOTORCONTROLLER_H
+#define MOTORCONTROLLER_H
+
+#include <atomic>
+#include "pigpio.h"
+
+class MotorController {
+public:
+    MotorController(int pin1, int pin2, int pin3, int pin4);
+    ~MotorController();
+    void rotateForward(int steps);
+    void rotateBackward(int steps);
+    void stop();
+    void reset();
+    void resetAfterCompleteCycle();  // Declaration of new method
+    bool hasRotatedForward() const;
+    bool hasRotatedBackward() const;
+
+private:
+    int pins[4];
+    std::atomic<bool> rotatedForward;
+    std::atomic<bool> rotatedBackward;
+    bool completeCycle = false;  // State to track complete cycle
+    void setStep(int w1, int w2, int w3, int w4);
+    void step(int totalSteps, int direction);
+};
+
+#endif // MOTORCONTROLLER_H
+*/
