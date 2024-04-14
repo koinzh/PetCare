@@ -1,0 +1,3 @@
+<map id="WaterLevelController" name="WaterLevelController">
+<area shape="rect" id="Node000001" title="Controller for managing water levels using a sensor and motor." alt="" coords="5,5,164,160"/>
+</map>

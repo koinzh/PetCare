@@ -1,0 +1,3 @@
+<map id="MotorController" name="MotorController">
+<area shape="rect" id="Node000001" title="Controller for a stepper motor that supports basic directional commands." alt="" coords="5,5,160,224"/>
+</map>
