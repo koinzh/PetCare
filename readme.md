@@ -27,9 +27,11 @@ When pets-owners leave home for a long time, feeding pets with food and water is
 
 
 ## Demo
-[Food system]()
-[Water system]()
-[system testing]()
+[Food system](https://vm.tiktok.com/ZGeu3ysVg/)
+
+[Water system](https://vm.tiktok.com/ZGeu38K81/)
+
+[system testing](https://vm.tiktok.com/ZGeu3hqQ6/)
 
 Full version video and Follow us on: 
 * [TikTok](https://www.tiktok.com/@smartpetcaresyste?_t=8kk3llkyQGP&_r=1)
