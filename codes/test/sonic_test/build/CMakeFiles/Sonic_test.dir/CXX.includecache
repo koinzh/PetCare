@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/UltrasonicSensor.h
+functional
+-
+mutex
+-
+condition_variable
+-
+pigpio.h
+../lib/pigpio.h
+
+/home/pi/Desktop/PetCare/codes/test/sonic_test/src/main.cpp
+UltrasonicSensor.h
+/home/pi/Desktop/PetCare/codes/test/sonic_test/src/UltrasonicSensor.h
+iostream
+-
+signal.h
+-
+atomic
+-
+csignal
+-
+

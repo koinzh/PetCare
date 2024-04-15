@@ -1,51 +1,87 @@
+
 #include "motor.h"
-#include <wiringPi.h>
+#include <chrono>
 #include <thread>
+#include <functional>
 
-Motor::Motor(int in1, int in2, int in3, int in4) : IN1(in1), IN2(in2), IN3(in3), IN4(in4) {
-    pinMode(IN1, OUTPUT);
-    pinMode(IN2, OUTPUT);
-    pinMode(IN3, OUTPUT);
-    pinMode(IN4, OUTPUT);
+
+MotorController::MotorController(int pin1, int pin2, int pin3, int pin4)
+: rotatedForward(false), rotatedBackward(false) {
+    pins[0] = pin1;
+    pins[1] = pin2;
+    pins[2] = pin3;
+    pins[3] = pin4;
+    for (int i = 0; i < 4; ++i) {
+        gpioSetMode(pins[i], PI_OUTPUT);
+    }
+   
+    
 }
 
-void Motor::setStep(int a, int b, int c, int d) {
-    digitalWrite(IN1, a);
-    digitalWrite(IN2, b);
-    digitalWrite(IN3, c);
-    digitalWrite(IN4, d);
+
+
+void MotorController::rotateForward(int steps) {
+    if (!rotatedForward.exchange(true)) {
+        step(steps, 1);
+    }
+    stop();
 }
 
-void Motor::forward(int t, int steps) {
-    std::thread([=]() {
-        for (int i = 0; i < steps; i++) {
-            setStep(1, 0, 0, 0);
-            std::this_thread::sleep_for(std::chrono::milliseconds(t));
-            setStep(0, 1, 0, 0);
-            std::this_thread::sleep_for(std::chrono::milliseconds(t));
-            setStep(0, 0, 1, 0);
-            std::this_thread::sleep_for(std::chrono::milliseconds(t));
-            setStep(0, 0, 0, 1);
-            std::this_thread::sleep_for(std::chrono::milliseconds(t));
-        }
-    }).detach(); // 启动线程并立即返回
+void MotorController::rotateBackward(int steps) {
+    if (!rotatedBackward.exchange(true)) {
+        step(steps, -1);
+    }
+    stop();
 }
 
-void Motor::stop() {
+void MotorController::stop() {
     setStep(0, 0, 0, 0);
 }
 
-void Motor::rollback(int t, int steps) {
-    std::thread([=]() {
-        for (int i = 0; i < steps; i++) {
-            setStep(0, 0, 0, 1);
-            std::this_thread::sleep_for(std::chrono::milliseconds(t));
-            setStep(0, 0, 1, 0);
-            std::this_thread::sleep_for(std::chrono::milliseconds(t));
-            setStep(0, 1, 0, 0);
-            std::this_thread::sleep_for(std::chrono::milliseconds(t));
-            setStep(1, 0, 0, 0);
-            std::this_thread::sleep_for(std::chrono::milliseconds(t));
-        }
-    }).detach(); // 启动线程并立即返回
+void MotorController::reset() {
+    rotatedForward = false;
+    rotatedBackward = false;
 }
+
+bool MotorController::hasRotatedForward() const {
+    return rotatedForward.load();
+}
+
+bool MotorController::hasRotatedBackward() const {
+    return rotatedBackward.load();
+}
+
+void MotorController::setStep(int w1, int w2, int w3, int w4) {
+    gpioWrite(pins[0], w1);
+    gpioWrite(pins[1], w2);
+    gpioWrite(pins[2], w3);
+    gpioWrite(pins[3], w4);
+    gpioDelay(1000); 
+  
+  
+}
+
+void MotorController::step(int totalSteps, int direction) {
+    int stepCount = 8;
+    int stepSequence[8][4] = {
+        {1,0,0,0}, 
+        {1,1,0,0},
+        {0,1,0,0}, 
+        {0,1,1,0},
+        {0,0,1,0},
+        {0,0,1,1},
+        {0,0,0,1},
+        {1,0,0,1}
+    };
+    for (int i = 0; i < totalSteps; ++i) {
+        for (int s = 0; s < stepCount; ++s) {
+            int idx = (direction > 0) ? s : (stepCount - 1 - s);
+            setStep(stepSequence[idx][0], stepSequence[idx][1], stepSequence[idx][2], stepSequence[idx][3]);
+        }
+    }
+}
+
+MotorController::~MotorController() {
+    stop();
+}
+

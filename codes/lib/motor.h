@@ -1,20 +1,29 @@
-#ifndef SMARTPET_MOTOR_H
-#define SMARTPET_MOTOR_H
 
-class Motor {
+#ifndef MOTORCONTROLLER_H
+#define MOTORCONTROLLER_H
+
+#include <atomic>
+#include "pigpio.h"
+
+class MotorController {
 public:
-    Motor(int in1, int in2, int in3, int in4); // 构造函数
-    void initialize();
-    void setStep(int a, int b, int c, int d);
-    void forward(int t, int steps);
+    MotorController(int pin1, int pin2, int pin3, int pin4);
+    ~MotorController();
+    void rotateForward(int steps);
+    void rotateBackward(int steps);
     void stop();
-    void rollback(int t, int steps);
+    void reset();
+    bool hasRotatedForward() const;
+    bool hasRotatedBackward() const;
 
 private:
-    int IN1; // 存储引脚配置
-    int IN2;
-    int IN3;
-    int IN4;
+    int pins[4];
+    std::atomic<bool> rotatedForward; 
+    std::atomic<bool> rotatedBackward;
+    void setStep(int w1, int w2, int w3, int w4);
+    void step(int totalSteps, int direction);
+    
 };
 
-#endif // SMARTPET_MOTOR_H
+#endif // MOTORCONTROLLER_H
+

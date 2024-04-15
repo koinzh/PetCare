@@ -1,1 +1,0 @@
-/usr/bin/c++ -rdynamic CMakeFiles/SmartPet.dir/main.cpp.o CMakeFiles/SmartPet.dir/lib/SmartPet.cpp.o CMakeFiles/SmartPet.dir/lib/sonic.cpp.o CMakeFiles/SmartPet.dir/lib/motor.cpp.o -o SmartPet  -Wl,-rpath,/home/pi/WiringPi/wiringPi /home/pi/WiringPi/wiringPi/libwiringPi.so.2.70 -lpthread 

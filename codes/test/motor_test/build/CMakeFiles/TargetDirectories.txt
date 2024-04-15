@@ -1,0 +1,3 @@
+/home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles/edit_cache.dir
+/home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles/rebuild_cache.dir
+/home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles/Motor_test.dir

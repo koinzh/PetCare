@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/Sonic_test.dir/src/main.cpp.o CMakeFiles/Sonic_test.dir/lib/sonic.cpp.o -o Sonic_test  -lpigpio -lpthread -lpthread 

@@ -130,44 +130,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SmartPet
+# Target rules for targets named PetCare
 
 # Build rule for target.
-SmartPet: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SmartPet
-.PHONY : SmartPet
+PetCare: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PetCare
+.PHONY : PetCare
 
 # fast build rule for target.
-SmartPet/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/build
-.PHONY : SmartPet/fast
+PetCare/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/build
+.PHONY : PetCare/fast
 
-lib/SmartPet.o: lib/SmartPet.cpp.o
+lib/IOTConnect.o: lib/IOTConnect.cpp.o
 
-.PHONY : lib/SmartPet.o
+.PHONY : lib/IOTConnect.o
 
 # target to build an object file
-lib/SmartPet.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/SmartPet.cpp.o
-.PHONY : lib/SmartPet.cpp.o
+lib/IOTConnect.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/IOTConnect.cpp.o
+.PHONY : lib/IOTConnect.cpp.o
 
-lib/SmartPet.i: lib/SmartPet.cpp.i
+lib/IOTConnect.i: lib/IOTConnect.cpp.i
 
-.PHONY : lib/SmartPet.i
+.PHONY : lib/IOTConnect.i
 
 # target to preprocess a source file
-lib/SmartPet.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/SmartPet.cpp.i
-.PHONY : lib/SmartPet.cpp.i
+lib/IOTConnect.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/IOTConnect.cpp.i
+.PHONY : lib/IOTConnect.cpp.i
 
-lib/SmartPet.s: lib/SmartPet.cpp.s
+lib/IOTConnect.s: lib/IOTConnect.cpp.s
 
-.PHONY : lib/SmartPet.s
+.PHONY : lib/IOTConnect.s
 
 # target to generate assembly for a file
-lib/SmartPet.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/SmartPet.cpp.s
-.PHONY : lib/SmartPet.cpp.s
+lib/IOTConnect.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/IOTConnect.cpp.s
+.PHONY : lib/IOTConnect.cpp.s
 
 lib/motor.o: lib/motor.cpp.o
 
@@ -175,7 +175,7 @@ lib/motor.o: lib/motor.cpp.o
 
 # target to build an object file
 lib/motor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/motor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/motor.cpp.o
 .PHONY : lib/motor.cpp.o
 
 lib/motor.i: lib/motor.cpp.i
@@ -184,7 +184,7 @@ lib/motor.i: lib/motor.cpp.i
 
 # target to preprocess a source file
 lib/motor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/motor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/motor.cpp.i
 .PHONY : lib/motor.cpp.i
 
 lib/motor.s: lib/motor.cpp.s
@@ -193,7 +193,7 @@ lib/motor.s: lib/motor.cpp.s
 
 # target to generate assembly for a file
 lib/motor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/motor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/motor.cpp.s
 .PHONY : lib/motor.cpp.s
 
 lib/sonic.o: lib/sonic.cpp.o
@@ -202,7 +202,7 @@ lib/sonic.o: lib/sonic.cpp.o
 
 # target to build an object file
 lib/sonic.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/sonic.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/sonic.cpp.o
 .PHONY : lib/sonic.cpp.o
 
 lib/sonic.i: lib/sonic.cpp.i
@@ -211,7 +211,7 @@ lib/sonic.i: lib/sonic.cpp.i
 
 # target to preprocess a source file
 lib/sonic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/sonic.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/sonic.cpp.i
 .PHONY : lib/sonic.cpp.i
 
 lib/sonic.s: lib/sonic.cpp.s
@@ -220,35 +220,89 @@ lib/sonic.s: lib/sonic.cpp.s
 
 # target to generate assembly for a file
 lib/sonic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/lib/sonic.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/sonic.cpp.s
 .PHONY : lib/sonic.cpp.s
 
-main.o: main.cpp.o
+lib/water.o: lib/water.cpp.o
 
-.PHONY : main.o
+.PHONY : lib/water.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/main.cpp.o
-.PHONY : main.cpp.o
+lib/water.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/water.cpp.o
+.PHONY : lib/water.cpp.o
 
-main.i: main.cpp.i
+lib/water.i: lib/water.cpp.i
 
-.PHONY : main.i
+.PHONY : lib/water.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/main.cpp.i
-.PHONY : main.cpp.i
+lib/water.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/water.cpp.i
+.PHONY : lib/water.cpp.i
 
-main.s: main.cpp.s
+lib/water.s: lib/water.cpp.s
 
-.PHONY : main.s
+.PHONY : lib/water.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPet.dir/build.make CMakeFiles/SmartPet.dir/main.cpp.s
-.PHONY : main.cpp.s
+lib/water.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/water.cpp.s
+.PHONY : lib/water.cpp.s
+
+lib/weight.o: lib/weight.cpp.o
+
+.PHONY : lib/weight.o
+
+# target to build an object file
+lib/weight.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/weight.cpp.o
+.PHONY : lib/weight.cpp.o
+
+lib/weight.i: lib/weight.cpp.i
+
+.PHONY : lib/weight.i
+
+# target to preprocess a source file
+lib/weight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/weight.cpp.i
+.PHONY : lib/weight.cpp.i
+
+lib/weight.s: lib/weight.cpp.s
+
+.PHONY : lib/weight.s
+
+# target to generate assembly for a file
+lib/weight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/weight.cpp.s
+.PHONY : lib/weight.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -258,19 +312,25 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... SmartPet"
-	@echo "... lib/SmartPet.o"
-	@echo "... lib/SmartPet.i"
-	@echo "... lib/SmartPet.s"
+	@echo "... PetCare"
+	@echo "... lib/IOTConnect.o"
+	@echo "... lib/IOTConnect.i"
+	@echo "... lib/IOTConnect.s"
 	@echo "... lib/motor.o"
 	@echo "... lib/motor.i"
 	@echo "... lib/motor.s"
 	@echo "... lib/sonic.o"
 	@echo "... lib/sonic.i"
 	@echo "... lib/sonic.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... lib/water.o"
+	@echo "... lib/water.i"
+	@echo "... lib/water.s"
+	@echo "... lib/weight.o"
+	@echo "... lib/weight.i"
+	@echo "... lib/weight.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

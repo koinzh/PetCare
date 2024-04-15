@@ -1,0 +1,3 @@
+/home/pi/Desktop/4.11/PetCare4.14/codes/test/iot_test2/build/CMakeFiles/rebuild_cache.dir
+/home/pi/Desktop/4.11/PetCare4.14/codes/test/iot_test2/build/CMakeFiles/edit_cache.dir
+/home/pi/Desktop/4.11/PetCare4.14/codes/test/iot_test2/build/CMakeFiles/SmartPet.dir
