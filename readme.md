@@ -21,20 +21,22 @@
 
 
 ## Introduction
-This project is the course design of real-time embedded system. In this course, we are the team 7. 
+This project is the course design of UofG ENG 5220 Realtime Embedded Programing. In this course, we are the team 7. 
 
-When pets-owners leave home for a long time, feeding pets with food and water is a big problem. So we make an automatic pet feeder to help people feed their pets when they are busy. The design used raspberry PI to make an automatic feeder, real-time monitoring of pet movement and food. Upload the feeding records to aliyun cloud server. This project can realize intelligent feeding, protecting the health of pets.
+When pets-owners leave home for a long time, feeding pets with food and water is a big problem. So we make an automatic pet feeder to help people feed their pets when they are busy. The design used raspberry PI to make an automatic feeder, real-time monitoring of pet movement and food. Upload the feeding records to aliyun cloud server. This project can realize intelligent food and water feeding, protecting the health of pets.
 
 
 ## Demo
-link
+[Food system]()
+[Water system]()
+[system testing]()
 
 Full version video and Follow us on: 
 * [TikTok](https://www.tiktok.com/@smartpetcaresyste?_t=8kk3llkyQGP&_r=1)
 
 
 ## Equipment
-* Raspberry Pi 4B+ 
+* Raspberry Pi 3B+ 
 * Ultrasonic sensor (HC-SR04)
 * Weight sensor (HX711)
 * Step motor (28BYJ-48)
