@@ -13,6 +13,7 @@
 - [Circuit Diagram](#circuit-diagram)
 - [Features](#features)
 - [Get started](#get-started)
+- [Version control](#version-control)
 - [License](#license)
 - [Acknowledgement](#acknowledgement)
 - [Contact us](#contact-us)
@@ -33,7 +34,7 @@ Full version video and Follow us on:
 
 
 ## Equipment
-* Raspberry Pi 3B+ 
+* Raspberry Pi 4B+ 
 * Ultrasonic sensor (HC-SR04)
 * Weight sensor (HX711)
 * Step motor (28BYJ-48)
@@ -46,9 +47,9 @@ Full version video and Follow us on:
 
 
 ## Features
-The ultrasonic sensor detects the distance to the pet and when the pet is close, the feeder starts working.
+This project uses raspberry PI to make an automatic pet-care system, which has a feeder with real-time monitoring of pet movement and food weight, a water feeder, and transfer the data of feeding activities to aliyun cloud server.  
 
-In this system, the ultrasonic sensor detects the distance to the pet, and the feeder starts working when the pet is close. The weight sensor detects the weight of the food in the bowl. When the food weight is less than 300 grams, the motor starts to rotate the baffle 90 degrees to replenish the food. When the food weight is greater than 300 grams, the motor rotates backward. 
+In this system, the ultrasonic sensor detects the distance to the pet, and the feeder starts working when the pet is close. The weight sensor detects the weight of the food in the bowl. When the food weight is less than threshold, the motor starts to rotate the baffle 90 degrees to replenish the food. When the food weight is greater than threshold, the motor rotates backward. User can change the weight threshold through app. 
 
 The water sensor detects the level of water in the container. When the water level is less than the setting height, start the water pump to draw water from the water storage tank and add it to the water feeding container. The water pump runs for 1 second. 
 
@@ -132,6 +133,10 @@ This is an example of how to list things you need to use the software and how to
 
 ## License
 MIT license
+
+
+## Version control
+check the repository to see the avilabe version
 
 
 ## Acknowledgement
