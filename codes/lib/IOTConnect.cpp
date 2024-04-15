@@ -19,17 +19,17 @@ const char *device_secret = "6e0f2762dba515a35eb098b138d90405";
 const char *region_id = "cn-shanghai";
 
 const char  *mqtt_host = "iot-06z00ecae6zqnin.mqtt.iothub.aliyuncs.com";
-using json = nlohmann::json; // 这样可以在代码中直接使用 json 来引用库
+using json = nlohmann::json; // Referencing libraries directly in code using json
 /* 
-    原端口：1883/443，对应的证书(GlobalSign R1),于2028年1月过期，届时可能会导致设备不能建连。
-    (推荐)新端口：8883，将搭载新证书，由阿里云物联网平台自签证书，于2053年7月过期。
+   Port: 1883/443, corresponding to the certificate (GlobalSign R1), expires in January 2028, which may cause the device to fail to establish a connection.
+    (Recommended) New port: 8883, will carry a new certificate, self-signed by Aliyun IoT platform, expires in July 2053.
 */
 const uint16_t port = 8883;
 
-/* 位于portfiles/aiot_port文件夹下的系统适配函数集合 */
+/* A collection of system adaptation functions in the portfiles/aiot_port folder. */
 extern aiot_sysdep_portfile_t g_aiot_sysdep_portfile;
 
-/* 位于external/ali_ca_cert.c中的服务器证书 */
+/* Server certificate located in external/ali_ca_cert.c */
 extern const char *ali_ca_cert;
 
 static pthread_t g_mqtt_process_thread;
@@ -43,23 +43,21 @@ int32_t demo_state_logcb(int32_t code, char *message)
     return 0;
 }
 
-/* MQTT事件回调函数, 当网络连接/重连/断开时被触发, 事件定义见core/aiot_mqtt_api.h */
+/* core/aiot_mqtt_api.h MQTT event callback function, triggered when network is connected/reconnected/disconnected, see core/aiot_mqtt_api.h for event definition*/
 void demo_mqtt_event_handler(void *handle, const aiot_mqtt_event_t *event, void *userdata)
 {
     switch (event->type) {
-        /* SDK因为用户调用了aiot_mqtt_connect()接口, 与mqtt服务器建立连接已成功 */
+        
         case AIOT_MQTTEVT_CONNECT: {
             printf("AIOT_MQTTEVT_CONNECT\n");
         }
         break;
 
-        /* SDK因为网络状况被动断连后, 自动发起重连已成功 */
         case AIOT_MQTTEVT_RECONNECT: {
             printf("AIOT_MQTTEVT_RECONNECT\n");
         }
         break;
 
-        /* SDK因为网络的状况而被动断开了连接, network是底层读写失败, heartbeat是没有按预期得到服务端心跳应答 */
         case AIOT_MQTTEVT_DISCONNECT: {
             const char *cause = (event->data.disconnect == AIOT_MQTTDISCONNEVT_NETWORK_DISCONNECT) ? ("network disconnect") :
                           ("heartbeat disconnect");
@@ -84,7 +82,7 @@ static void demo_dm_recv_generic_reply(void *dm_handle, const aiot_dm_recv_t *re
            recv->data.generic_reply.message);
 }
 
-//int weightThreshold = 400; 
+
 
 static void demo_dm_recv_property_set(void *dm_handle, const aiot_dm_recv_t *recv, void *userdata)
 {
@@ -96,22 +94,15 @@ static void demo_dm_recv_property_set(void *dm_handle, const aiot_dm_recv_t *rec
            
     IOTConnect *iotConnect = static_cast<IOTConnect*>(userdata);
 
-    // 解析JSON字符串以查找LightSwitch属性
+    // Parsing JSON strings to find properties
     const char *params = recv->data.property_set.params;
     int weightValue;
     if (sscanf(params, "{\"Weightthreshold\":%d}", &weightValue) == 1) {
-    iotConnect -> weight1 = weightValue;  // 更新switch1的值
+    iotConnect -> weight1 = weightValue;  
     printf("weightvalue: %d/n", weightValue);
     }
-   /* if (strstr(params, "\"switch\":1") != NULL) {
-        iotConnect->switch1 = 1;
-        printf("LightSwitch is turned ON\n");
-    } else if (strstr(params, "\"switch\":0") != NULL) {
-        iotConnect->switch1 = 0;
-        printf("LightSwitch is turned OFF\n");
-    }*/
-
-    /* TODO: 以下代码演示如何对来自云平台的属性设置指令进行应答, 用户可取消注释查看演示效果 */
+   
+    /* TODO: The following code demonstrates how to respond to property setting commands from the cloud platform, users can uncomment to see the effect of the demo */
     
     {
         aiot_dm_msg_t msg;
@@ -137,27 +128,7 @@ static void demo_dm_recv_async_service_invoke(void *dm_handle, const aiot_dm_rec
            recv->data.async_service_invoke.params_len,
            recv->data.async_service_invoke.params);
 
-    /* TODO: 以下代码演示如何对来自云平台的异步服务调用进行应答, 用户可取消注释查看演示效果
-        *
-        * 注意: 如果用户在回调函数外进行应答, 需要自行保存msg_id, 因为回调函数入参在退出回调函数后将被SDK销毁, 不可以再访问到
-        */
-
-    /*
-    {
-        aiot_dm_msg_t msg;
-
-        memset(&msg, 0, sizeof(aiot_dm_msg_t));
-        msg.type = AIOT_DMMSG_ASYNC_SERVICE_REPLY;
-        msg.data.async_service_reply.msg_id = recv->data.async_service_invoke.msg_id;
-        msg.data.async_service_reply.code = 200;
-        msg.data.async_service_reply.service_id = "ToggleLightSwitch";
-        msg.data.async_service_reply.data = "{\"dataA\": 20}";
-        int32_t res = aiot_dm_send(dm_handle, &msg);
-        if (res < 0) {
-            printf("aiot_dm_send failed\r\n");
-        }
-    }
-    */
+    
 }
 
 static void demo_dm_recv_sync_service_invoke(void *dm_handle, const aiot_dm_recv_t *recv, void *userdata)
@@ -169,46 +140,13 @@ static void demo_dm_recv_sync_service_invoke(void *dm_handle, const aiot_dm_recv
            recv->data.sync_service_invoke.params_len,
            recv->data.sync_service_invoke.params);
 
-    /* TODO: 以下代码演示如何对来自云平台的同步服务调用进行应答, 用户可取消注释查看演示效果
-        *
-        * 注意: 如果用户在回调函数外进行应答, 需要自行保存msg_id和rrpc_id字符串, 因为回调函数入参在退出回调函数后将被SDK销毁, 不可以再访问到
-        */
-
-    /*
-    {
-        aiot_dm_msg_t msg;
-
-        memset(&msg, 0, sizeof(aiot_dm_msg_t));
-        msg.type = AIOT_DMMSG_SYNC_SERVICE_REPLY;
-        msg.data.sync_service_reply.rrpc_id = recv->data.sync_service_invoke.rrpc_id;
-        msg.data.sync_service_reply.msg_id = recv->data.sync_service_invoke.msg_id;
-        msg.data.sync_service_reply.code = 200;
-        msg.data.sync_service_reply.service_id = "SetLightSwitchTimer";
-        msg.data.sync_service_reply.data = "{}";
-        int32_t res = aiot_dm_send(dm_handle, &msg);
-        if (res < 0) {
-            printf("aiot_dm_send failed\r\n");
-        }
-    }
-    */
+   
 }
 
 static void demo_dm_recv_raw_data(void *dm_handle, const aiot_dm_recv_t *recv, void *userdata)
 {
     printf("demo_dm_recv_raw_data raw data len = %d\r\n", recv->data.raw_data.data_len);
-    /* TODO: 以下代码演示如何发送二进制格式数据, 若使用需要有相应的数据透传脚本部署在云端 */
-    /*
-    {
-        aiot_dm_msg_t msg;
-        uint8_t raw_data[] = {0x01, 0x02};
-
-        memset(&msg, 0, sizeof(aiot_dm_msg_t));
-        msg.type = AIOT_DMMSG_RAW_DATA;
-        msg.data.raw_data.data = raw_data;
-        msg.data.raw_data.data_len = sizeof(raw_data);
-        aiot_dm_send(dm_handle, &msg);
-    }
-    */
+    
 }
 
 static void demo_dm_recv_raw_sync_service_invoke(void *dm_handle, const aiot_dm_recv_t *recv, void *userdata)
@@ -221,55 +159,55 @@ static void demo_dm_recv_raw_sync_service_invoke(void *dm_handle, const aiot_dm_
 static void demo_dm_recv_raw_data_reply(void *dm_handle, const aiot_dm_recv_t *recv, void *userdata)
 {
     printf("demo_dm_recv_raw_data_reply receive reply for up_raw msg, data len = %d\r\n", recv->data.raw_data.data_len);
-    /* TODO: 用户处理下行的二进制数据, 位于recv->data.raw_data.data中 */
+    
 }
 
 
 
-/* 用户数据接收处理回调函数 */
+/* User Data Receiving Processing Callback Functions */
 static void demo_dm_recv_handler(void *dm_handle, const aiot_dm_recv_t *recv, void *userdata)
 {
     printf("demo_dm_recv_handler, type = %d\r\n", recv->type);
 
     switch (recv->type) {
 
-        /* 属性上报, 事件上报, 获取期望属性值或者删除期望属性值的应答 */
+        /* Attribute Reporting, Event Reporting, Answer to get desired attribute value or delete desired attribute value */
         case AIOT_DMRECV_GENERIC_REPLY: {
             demo_dm_recv_generic_reply(dm_handle, recv, userdata);
         }
         break;
 
-        /* 属性设置 */
+        /* Property Settings */
         case AIOT_DMRECV_PROPERTY_SET: {
             demo_dm_recv_property_set(dm_handle, recv, userdata);
         }
         break;
 
-        /* 异步服务调用 */
+        /* asynchronous service call */
         case AIOT_DMRECV_ASYNC_SERVICE_INVOKE: {
             demo_dm_recv_async_service_invoke(dm_handle, recv, userdata);
         }
         break;
 
-        /* 同步服务调用 */
+        /* Synchronised Service Calls */
         case AIOT_DMRECV_SYNC_SERVICE_INVOKE: {
             demo_dm_recv_sync_service_invoke(dm_handle, recv, userdata);
         }
         break;
 
-        /* 下行二进制数据 */
+        /*downlink binary data */
         case AIOT_DMRECV_RAW_DATA: {
             demo_dm_recv_raw_data(dm_handle, recv, userdata);
         }
         break;
 
-        /* 二进制格式的同步服务调用, 比单纯的二进制数据消息多了个rrpc_id */
+        /* Synchronised service call in binary format, with an additional rrpc_id than a simple binary data message  */
         case AIOT_DMRECV_RAW_SYNC_SERVICE_INVOKE: {
             demo_dm_recv_raw_sync_service_invoke(dm_handle, recv, userdata);
         }
         break;
 
-        /* 上行二进制数据后, 云端的回复报文 */
+        /* After uploading the binary data, the reply message from the cloud */
         case AIOT_DMRECV_RAW_DATA_REPLY: {
             demo_dm_recv_raw_data_reply(dm_handle, recv, userdata);
         }
@@ -280,7 +218,7 @@ static void demo_dm_recv_handler(void *dm_handle, const aiot_dm_recv_t *recv, vo
     }
 }
 
-/* 执行aiot_mqtt_recv的线程, 包含网络自动重连和从服务器收取MQTT消息 */
+/* The thread that executes aiot_mqtt_recv, including automatic network reconnection and receiving MQTT messages from the server. */
 void *demo_mqtt_recv_thread(void *args)
 {
     int32_t res = STATE_SUCCESS;
@@ -297,7 +235,7 @@ void *demo_mqtt_recv_thread(void *args)
     return NULL;
 }
 
-/* 执行aiot_mqtt_process的线程, 包含心跳发送和QoS1消息重发 */
+/* Threads executing aiot_mqtt_process, including heartbeat sending and QoS1 message retransmission */
 void *demo_mqtt_process_thread(void *args)
 {
     int32_t res = STATE_SUCCESS;
@@ -313,7 +251,7 @@ void *demo_mqtt_process_thread(void *args)
 }
 
 
-// 构造函数，初始化成员变量
+// Constructor, initialising member variables
 IOTConnect::IOTConnect(){
     initializeIotSdk();
 }
@@ -324,67 +262,64 @@ IOTConnect::IOTConnect(){
 
 void IOTConnect::initializeIotSdk() {
     int32_t     res = STATE_SUCCESS;
-    aiot_sysdep_network_cred_t cred; /* 安全凭据结构体, 如果要用TLS, 这个结构体中配置CA证书等参数 */
+    aiot_sysdep_network_cred_t cred; /* Security credentials structure, if you want to use TLS, this structure is configured with parameters such as CA certificate. */
     uint8_t post_reply = 1;
 
 
-    /* 配置SDK的底层依赖 */
+    /* Configuring the SDK's underlying dependencies*/
     aiot_sysdep_set_portfile(&g_aiot_sysdep_portfile);
-    /* 配置SDK的日志输出 */
+    /*  Configure the SDK log output */
     aiot_state_set_logcb(demo_state_logcb);
 
-    /* 创建SDK的安全凭据, 用于建立TLS连接 */
+    /* Creates security credentials for the SDK, which are used to establish a TLS connection. */
     memset(&cred, 0, sizeof(aiot_sysdep_network_cred_t));
-    cred.option = AIOT_SYSDEP_NETWORK_CRED_SVRCERT_CA;  /* 使用RSA证书校验MQTT服务端 */
-    cred.max_tls_fragment = 16384; /* 最大的分片长度为16K, 其它可选值还有4K, 2K, 1K, 0.5K */
-    cred.sni_enabled = 1;                               /* TLS建连时, 支持Server Name Indicator */
-    cred.x509_server_cert = ali_ca_cert;                 /* 用来验证MQTT服务端的RSA根证书 */
-    cred.x509_server_cert_len = strlen(ali_ca_cert);     /* 用来验证MQTT服务端的RSA根证书长度 */
+    cred.option = AIOT_SYSDEP_NETWORK_CRED_SVRCERT_CA;  
+    cred.max_tls_fragment = 16384; 
+    cred.sni_enabled = 1;                             
+    cred.x509_server_cert = ali_ca_cert;                 
+    cred.x509_server_cert_len = strlen(ali_ca_cert);     
 
-    /* 创建1个MQTT客户端实例并内部初始化默认参数 */
+    /* Create 1 instance of MQTT client and initialise default parameters internally */
     mqtt_handle = aiot_mqtt_init();
     if (mqtt_handle == NULL) {
         std::cout << "aiot_mqtt_init failed"<<std::endl;
         return;}
 
 
-    /* 配置MQTT服务器地址 */
+    /* Configuring the MQTT Server Address */
     aiot_mqtt_setopt(mqtt_handle, AIOT_MQTTOPT_HOST, (void *)mqtt_host);
-    /* 配置MQTT服务器端口 */
+    /* Configuring the MQTT Server Port */
     aiot_mqtt_setopt(mqtt_handle, AIOT_MQTTOPT_PORT, (void *)&port);
-    /* 配置设备productKey */
+    /* productKey */
     aiot_mqtt_setopt(mqtt_handle, AIOT_MQTTOPT_PRODUCT_KEY, (void *)product_key);
-    /* 配置设备deviceName */
+    /* deviceName */
     aiot_mqtt_setopt(mqtt_handle, AIOT_MQTTOPT_DEVICE_NAME, (void *)device_name);
-    /* 配置设备deviceSecret */
+    /* deviceSecret */
     aiot_mqtt_setopt(mqtt_handle, AIOT_MQTTOPT_DEVICE_SECRET, (void *)device_secret);
-    /* 配置网络连接的安全凭据, 上面已经创建好了 */
     aiot_mqtt_setopt(mqtt_handle, AIOT_MQTTOPT_NETWORK_CRED, (void *)&cred);
-    /* 配置MQTT事件回调函数 */
+    /* Configuring MQTT Event Callback Functions  */
     aiot_mqtt_setopt(mqtt_handle, AIOT_MQTTOPT_EVENT_HANDLER, (void *)demo_mqtt_event_handler);
 
 
-    /* 创建DATA-MODEL实例 */
+    /* Creating a DATA-MODEL instance */
     dm_handle = aiot_dm_init();
     if (dm_handle == NULL) {
         printf("aiot_dm_init failed");
         return;
     }
-    /* 配置MQTT实例句柄 */
+    /* Configuring MQTT Instance Handles */
     aiot_dm_setopt(dm_handle, AIOT_DMOPT_MQTT_HANDLE, mqtt_handle);
-    /* 配置消息接收处理回调函数 */
+    /* Configuring Message Receiving Processing Callback Functions */
     aiot_dm_setopt(dm_handle, AIOT_DMOPT_RECV_HANDLER, (void *)demo_dm_recv_handler);
     
-    aiot_dm_setopt(dm_handle, AIOT_DMOPT_USERDATA, (void *)this); // 确保传入正确的this指针
+    aiot_dm_setopt(dm_handle, AIOT_DMOPT_USERDATA, (void *)this); 
     aiot_dm_setopt(dm_handle, AIOT_DMOPT_RECV_HANDLER, (void *)demo_dm_recv_handler);
 
-    /* 配置是云端否需要回复post_reply给设备. 如果为1, 表示需要云端回复, 否则表示不回复 */
     aiot_dm_setopt(dm_handle, AIOT_DMOPT_POST_REPLY, (void *)&post_reply);
 
-    /* 与服务器建立MQTT连接 */
+    /* Server establishes MQTT connection */
     res = aiot_mqtt_connect(mqtt_handle);
     if (res < STATE_SUCCESS) {
-        /* 尝试建立连接失败, 销毁MQTT实例, 回收资源 */
         aiot_dm_deinit(&dm_handle);
         aiot_mqtt_deinit(&mqtt_handle);
         printf("aiot_mqtt_connect failed: -0x%04X\n\r\n", -res);
@@ -393,7 +328,7 @@ void IOTConnect::initializeIotSdk() {
     }
 
   
-    /* 创建一个单独的线程, 专用于执行aiot_mqtt_process, 它会自动发送心跳保活, 以及重发QoS1的未应答报文 */
+    /* Create a separate thread dedicated to the execution of aiot_mqtt_process, which automatically sends out heartbeat keepalives and retransmits QoS1 unanswered messages. */
     g_mqtt_process_thread_running = 1;
     res = pthread_create(&g_mqtt_process_thread, NULL, demo_mqtt_process_thread, mqtt_handle);
     if (res < 0) {
@@ -403,7 +338,7 @@ void IOTConnect::initializeIotSdk() {
         return;
     }
 
-    /* 创建一个单独的线程用于执行aiot_mqtt_recv, 它会循环收取服务器下发的MQTT消息, 并在断线时自动重连 */
+    /* Create a separate thread to execute aiot_mqtt_recv, which will loop through the MQTT messages sent by the server and automatically reconnect when disconnected. */
     g_mqtt_recv_thread_running = 1;
     res = pthread_create(&g_mqtt_recv_thread, NULL, demo_mqtt_recv_thread, mqtt_handle);
     if (res < 0) {
@@ -417,16 +352,16 @@ void IOTConnect::initializeIotSdk() {
 }
 
 void IOTConnect::deinitializeIotSdk() {
-    // 检查设备管理（DM）实例是否已初始化，如果是，则反初始化
+    // Check if the Device Management (DM) instance is initialised, and if so, counter-initialise it
     if (dm_handle != NULL) {
         aiot_dm_deinit(&dm_handle);
-        dm_handle = NULL; // 确保指针被置空，避免悬挂指针
+        dm_handle = NULL; 
         std::cout << "Device Management (DM) instance deinitialized." << std::endl;
     }
 
-    // 检查MQTT实例是否已初始化，如果是，则断开连接并反初始化
+    // Check if the MQTT instance is initialised, if so, disconnect and reverse initialisation
     if (mqtt_handle != NULL) {
-        // 断开MQTT连接
+        // Disconnecting MQTT
         int32_t res = aiot_mqtt_disconnect(mqtt_handle);
         if (res < 0) {
             std::cout << "aiot_mqtt_disconnect failed: -0x" << std::hex << -res << std::endl;
@@ -434,43 +369,42 @@ void IOTConnect::deinitializeIotSdk() {
             std::cout << "MQTT disconnected." << std::endl;
         }
 
-        // 反初始化MQTT实例
+        
         aiot_mqtt_deinit(&mqtt_handle);
-        mqtt_handle = NULL; // 确保指针被置空，避免悬挂指针
+        mqtt_handle = NULL; 
         std::cout << "MQTT instance deinitialized." << std::endl;
     }
 
-    // 在这里执行任何其他清理工作，例如释放分配的内存等
+    
 }
 
 IOTConnect::~IOTConnect() {
     deinitializeIotSdk();
 
-    // 析构函数其他代码...
 }
 
 void IOTConnect::reportDistance(float distance, int weight) {
-    // 确保dmHandle已经初始化并配置好
+    
     if (dm_handle == nullptr) {
-        // 错误处理: DM句柄未初始化
+        // DM handle is not initialized
         std::cerr << "DM handle is not initialized." << std::endl;
         return;
     }
 
-    // 构造上报的JSON字符串
+    // Constructing the reported JSON string
     char payload[128];
     snprintf(payload, sizeof(payload), "{\"Distance\": %.2f, \"Weight\": %d}", distance, weight);
 
-    // 准备发送的消息
+    // Message ready to send
     aiot_dm_msg_t msg;
     memset(&msg, 0, sizeof(aiot_dm_msg_t));
-    msg.type = AIOT_DMMSG_PROPERTY_POST; // 设置消息类型为属性上报
-    msg.data.property_post.params = payload; // 设置消息内容
+    msg.type = AIOT_DMMSG_PROPERTY_POST; // Set the message type to Attribute Up
+    msg.data.property_post.params = payload; // Setting the message content
 
-    // 发送消息
+    // send
     int32_t res = aiot_dm_send(dm_handle, &msg);
     if (res < 0) {
-        // 错误处理: 发送失败
+        // failed
         std::cerr << "Send distance property failed, code: " << res << std::endl;
     } else {
         std::cout << "Distance property reported successfully." << std::endl;

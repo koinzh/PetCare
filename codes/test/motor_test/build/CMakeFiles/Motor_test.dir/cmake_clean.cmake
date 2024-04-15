@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Motor_test.dir/lib/motor.cpp.o"
-  "CMakeFiles/Motor_test.dir/main.cpp.o"
+  "CMakeFiles/Motor_test.dir/src/main.cpp.o"
   "Motor_test"
   "Motor_test.pdb"
 )

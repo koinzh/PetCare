@@ -14,23 +14,9 @@ thread
 pigpio.h
 -
 
-/home/pi/Desktop/PetCare/codes/test/weight_test/lib/weight.cpp
+/home/pi/Desktop/PetCare/codes/test/weight_test/src/main.cpp
 weight.h
-/home/pi/Desktop/PetCare/codes/test/weight_test/lib/weight.h
-iostream
--
-
-/home/pi/Desktop/PetCare/codes/test/weight_test/lib/weight.h
-atomic
--
-thread
--
-pigpio.h
--
-
-/home/pi/Desktop/PetCare/codes/test/weight_test/main.cpp
-weight.h
-/home/pi/Desktop/PetCare/codes/test/weight_test/weight.h
+/home/pi/Desktop/PetCare/codes/test/weight_test/src/weight.h
 iostream
 -
 chrono

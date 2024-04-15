@@ -5,7 +5,7 @@
 #include <thread>
 #include <pigpio.h>
 #include <queue>
-#include <numeric>  // 包括这个头文件以使用 std::accumulate
+#include <numeric>  
 
 
 class WeightSensor {
@@ -25,10 +25,9 @@ private:
     std::atomic<bool> running;
     std::atomic<int> latestWeight;
     std::thread weightThread;
-    //std::queue<int> weightHistory;
-  //  const size_t weightHistorySize = 10;  
+   
     std::deque<int> weightHistory;
-    const size_t weightHistorySize = 10;  // 维持10个数据点进行平均
+    const size_t weightHistorySize = 10;  
 
     void triggerRead();
     int readWeight();

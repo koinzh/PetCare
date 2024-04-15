@@ -4,6 +4,6 @@
 CMakeFiles/Water_test.dir/lib/water.cpp.o: ../lib/water.cpp
 CMakeFiles/Water_test.dir/lib/water.cpp.o: ../lib/water.h
 
-CMakeFiles/Water_test.dir/main.cpp.o: ../lib/water.h
-CMakeFiles/Water_test.dir/main.cpp.o: ../main.cpp
+CMakeFiles/Water_test.dir/src/main.cpp.o: ../lib/water.h
+CMakeFiles/Water_test.dir/src/main.cpp.o: ../src/main.cpp
 

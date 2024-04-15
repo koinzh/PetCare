@@ -12,21 +12,9 @@ chrono
 pigpio.h
 -
 
-/home/pi/Desktop/PetCare/codes/test/water_test/lib/water.cpp
+/home/pi/Desktop/PetCare/codes/test/water_test/src/main.cpp
 water.h
-/home/pi/Desktop/PetCare/codes/test/water_test/lib/water.h
-iostream
--
-
-/home/pi/Desktop/PetCare/codes/test/water_test/lib/water.h
-chrono
--
-pigpio.h
--
-
-/home/pi/Desktop/PetCare/codes/test/water_test/main.cpp
-water.h
-/home/pi/Desktop/PetCare/codes/test/water_test/water.h
+/home/pi/Desktop/PetCare/codes/test/water_test/src/water.h
 iostream
 -
 chrono

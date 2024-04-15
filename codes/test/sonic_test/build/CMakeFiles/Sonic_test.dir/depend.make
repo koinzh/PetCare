@@ -4,6 +4,6 @@
 CMakeFiles/Sonic_test.dir/lib/sonic.cpp.o: ../lib/UltrasonicSensor.h
 CMakeFiles/Sonic_test.dir/lib/sonic.cpp.o: ../lib/sonic.cpp
 
-CMakeFiles/Sonic_test.dir/main.cpp.o: ../lib/UltrasonicSensor.h
-CMakeFiles/Sonic_test.dir/main.cpp.o: ../main.cpp
+CMakeFiles/Sonic_test.dir/src/main.cpp.o: ../lib/UltrasonicSensor.h
+CMakeFiles/Sonic_test.dir/src/main.cpp.o: ../src/main.cpp
 

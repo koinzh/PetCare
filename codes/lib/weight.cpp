@@ -40,16 +40,23 @@ int WeightSensor::getLatestWeight() const {
 
 void WeightSensor::triggerRead() {
     if (!running) return;
-   // int rawWeight = readWeight();
-    //updateWeightHistory(rawWeight);
+   
     latestWeight.store(readWeight());  // Update the latest weight
 }
 
+
 int WeightSensor::readWeight() {
     int rawWeight = readRawWeight();
-    //return static_cast<int>(1.52 * (static_cast<float>(rawWeight - calibration) / coefficient) - 76);
-    return static_cast<int>(static_cast<float>(rawWeight - calibration) / coefficient);
+    int calculatedWeight = static_cast<int>(static_cast<float>(rawWeight - calibration) / coefficient);
+
+   
+    if (calculatedWeight == 342) {
+        return latestWeight.load();  // hardware defect filtering
+    }
+
+    return calculatedWeight;
 }
+
 
 int WeightSensor::readRawWeight() {
     long value = 0;
@@ -70,29 +77,16 @@ int WeightSensor::readRawWeight() {
     }
     return static_cast<int>(value);
 }
-/*
+
 void WeightSensor::updateWeightHistory(int newWeight) {
     if (weightHistory.size() >= weightHistorySize) {
-        weightHistory.pop();  // 如果队列已满，移除最老的数据
+        weightHistory.pop_front();  //If the deque is full, remove the oldest data
     }
-    weightHistory.push(newWeight);  // 添加新的重量读数
+    weightHistory.push_back(newWeight);  // add new weight data
 }
 
 int WeightSensor::getSmoothedWeight() {
     if (weightHistory.empty()) return 0;
     int sum = std::accumulate(weightHistory.begin(), weightHistory.end(), 0);
-    return sum / weightHistory.size();  // 计算并返回平均重量
-}
-*/
-void WeightSensor::updateWeightHistory(int newWeight) {
-    if (weightHistory.size() >= weightHistorySize) {
-        weightHistory.pop_front();  // 如果deque已满，移除最老的数据
-    }
-    weightHistory.push_back(newWeight);  // 添加新的重量记录
-}
-
-int WeightSensor::getSmoothedWeight() {
-    if (weightHistory.empty()) return 0;
-    int sum = std::accumulate(weightHistory.begin(), weightHistory.end(), 0);
-    return sum / weightHistory.size();  // 计算并返回平均重量
+    return sum / weightHistory.size();  // Calculate and return the average weight
 }

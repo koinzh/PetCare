@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pi/Desktop/PetCare/codes/test/sonic_test/lib/sonic.cpp" "/home/pi/Desktop/PetCare/codes/test/sonic_test/build/CMakeFiles/Sonic_test.dir/lib/sonic.cpp.o"
-  "/home/pi/Desktop/PetCare/codes/test/sonic_test/main.cpp" "/home/pi/Desktop/PetCare/codes/test/sonic_test/build/CMakeFiles/Sonic_test.dir/main.cpp.o"
+  "/home/pi/Desktop/PetCare/codes/test/sonic_test/src/main.cpp" "/home/pi/Desktop/PetCare/codes/test/sonic_test/build/CMakeFiles/Sonic_test.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -4,6 +4,6 @@
 CMakeFiles/Motor_test.dir/lib/motor.cpp.o: ../lib/MotorController.h
 CMakeFiles/Motor_test.dir/lib/motor.cpp.o: ../lib/motor.cpp
 
-CMakeFiles/Motor_test.dir/main.cpp.o: ../lib/MotorController.h
-CMakeFiles/Motor_test.dir/main.cpp.o: ../main.cpp
+CMakeFiles/Motor_test.dir/src/main.cpp.o: ../lib/MotorController.h
+CMakeFiles/Motor_test.dir/src/main.cpp.o: ../src/main.cpp
 

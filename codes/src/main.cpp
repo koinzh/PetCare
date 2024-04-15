@@ -15,9 +15,8 @@ std::mutex mtx;  // Mutexes are used to protect shared variables
 
 std::chrono::time_point<std::chrono::steady_clock> lastReverseTime;
 std::chrono::time_point<std::chrono::steady_clock> lastReverseTime2;
-const std::chrono::seconds reverseCooldown(30);  // 设置十分钟冷却时间
+const std::chrono::seconds reverseCooldown(30);  // cool for 30s
 const std::chrono::seconds reverseCooldown2(2);
-//int weightThreshold = 400; 
 void signalHandler(int signum) {
     terminateProgram = true;
 }
@@ -39,7 +38,7 @@ int main() {
     const int thresholdCount = 3; //detect three times distance < thresholdDistance and weight < weightThreshold
     const float thresholdDistance = 10.0;  
     const float minValidDistance = 0.1;  
-    int weightThreshold = iotconnect.weight1;  
+    int weightThreshold = iotconnect.weight1;
 
     weightSensor.start();  
     std::thread waterThread([&](){while (!terminateProgram.load()) {}});//water 
@@ -47,19 +46,18 @@ int main() {
 
     sensor.setDistanceCallback([&](float distance) {
         std::lock_guard<std::mutex> lock(mtx);  // protect shared variables
-        auto now = std::chrono::steady_clock::now();  // 获取当前时间
+        auto now = std::chrono::steady_clock::now();  
         auto now2 = std::chrono::steady_clock::now();  
         weight1 = weightSensor.getLatestWeight();
-        if(now2 > lastReverseTime2 + reverseCooldown2 && weight1 >= 0 &&  weight1 != 342){
+        if(now2 > lastReverseTime2 + reverseCooldown2 ){
             weightThreshold = iotconnect.weight1;
-            std::cout << "Distance: " << distance << " cm, Weight: " << weight1 << " g, weighthreshold:" << weightThreshold << "/n" << std::endl;
+            std::cout << "Distance: " << distance << " cm, Weight: " << weight1 << " g, weightthreshold:" << weightThreshold << "g"<<std::endl;
             iotconnect.reportDistance(distance,weight1);
-          // weightThreshold = iotconnect.weight1;
+           
+         
             lastReverseTime2 = std::chrono::steady_clock::now(); 
-            
             }
-       // std::cout << "Distance: " << distance << " cm, Weight: " << weightSensor.getLatestWeight() << " g" << std::endl;
-    //   std::cout << " Weight: " << weightSensor.getLatestWeight() << " g" << std::endl;
+      
         if (distance < minValidDistance || distance > 500) {  // ignore meanless data
             return;
         }
@@ -69,6 +67,8 @@ int main() {
             countBelowThreshold++;
             if (countBelowThreshold >= thresholdCount && !motor.hasRotatedForward()) {
                 std::cout << "Triggering Forward rotation." << std::endl;
+                std::cout << "currentWeight"<< currentWeight<< std::endl;
+                std::cout << "Weighthold:"<< weightThreshold << std::endl;
                 motor.rotateForward(128);  // ++128==motor 90 angle 
             }
         } else {
@@ -78,9 +78,11 @@ int main() {
         // if weight> weightThreshold and motor has been Forwarded
         if (currentWeight >= weightThreshold && motor.hasRotatedForward()) {
             std::cout << "Triggering Reverse rotation." << std::endl;
+            std::cout << "currentWeight"<< currentWeight<< std::endl;
+            std::cout << "Weighthold:"<< weightThreshold << std::endl;
             motor.rotateBackward(128);  //  --128==motor 90 angle
             motor.reset();  // reset motor and allowed motor Forward again
-            lastReverseTime = std::chrono::steady_clock::now();  // 更新时间戳
+            lastReverseTime = std::chrono::steady_clock::now();  
         }
     });
 
@@ -88,16 +90,9 @@ int main() {
 
     while (!terminateProgram) {
         
-       ////test code 
-       // std::cout << "Motor hasRotatedForward: " << motor.hasRotatedForward() << std::endl;
-      //  std::this_thread::sleep_for(std::chrono::seconds(1)); 
-        //testcode
     }
-        
-        
-        
 
-    waterThread.join();//water
+    waterThread.join();
     weightSensor.stop();
     sensor.stop();
     gpioTerminate();

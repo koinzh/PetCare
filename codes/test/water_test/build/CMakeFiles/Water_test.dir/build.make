@@ -76,18 +76,18 @@ include CMakeFiles/Water_test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Water_test.dir/flags.make
 
-CMakeFiles/Water_test.dir/main.cpp.o: CMakeFiles/Water_test.dir/flags.make
-CMakeFiles/Water_test.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/PetCare/codes/test/water_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Water_test.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Water_test.dir/main.cpp.o -c /home/pi/Desktop/PetCare/codes/test/water_test/main.cpp
+CMakeFiles/Water_test.dir/src/main.cpp.o: CMakeFiles/Water_test.dir/flags.make
+CMakeFiles/Water_test.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/PetCare/codes/test/water_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Water_test.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Water_test.dir/src/main.cpp.o -c /home/pi/Desktop/PetCare/codes/test/water_test/src/main.cpp
 
-CMakeFiles/Water_test.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Water_test.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Desktop/PetCare/codes/test/water_test/main.cpp > CMakeFiles/Water_test.dir/main.cpp.i
+CMakeFiles/Water_test.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Water_test.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Desktop/PetCare/codes/test/water_test/src/main.cpp > CMakeFiles/Water_test.dir/src/main.cpp.i
 
-CMakeFiles/Water_test.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Water_test.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Desktop/PetCare/codes/test/water_test/main.cpp -o CMakeFiles/Water_test.dir/main.cpp.s
+CMakeFiles/Water_test.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Water_test.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Desktop/PetCare/codes/test/water_test/src/main.cpp -o CMakeFiles/Water_test.dir/src/main.cpp.s
 
 CMakeFiles/Water_test.dir/lib/water.cpp.o: CMakeFiles/Water_test.dir/flags.make
 CMakeFiles/Water_test.dir/lib/water.cpp.o: ../lib/water.cpp
@@ -104,13 +104,13 @@ CMakeFiles/Water_test.dir/lib/water.cpp.s: cmake_force
 
 # Object files for target Water_test
 Water_test_OBJECTS = \
-"CMakeFiles/Water_test.dir/main.cpp.o" \
+"CMakeFiles/Water_test.dir/src/main.cpp.o" \
 "CMakeFiles/Water_test.dir/lib/water.cpp.o"
 
 # External object files for target Water_test
 Water_test_EXTERNAL_OBJECTS =
 
-Water_test: CMakeFiles/Water_test.dir/main.cpp.o
+Water_test: CMakeFiles/Water_test.dir/src/main.cpp.o
 Water_test: CMakeFiles/Water_test.dir/lib/water.cpp.o
 Water_test: CMakeFiles/Water_test.dir/build.make
 Water_test: /usr/lib/libpigpio.so

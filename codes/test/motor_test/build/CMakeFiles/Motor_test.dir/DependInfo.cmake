@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pi/Desktop/PetCare/codes/test/motor_test/lib/motor.cpp" "/home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles/Motor_test.dir/lib/motor.cpp.o"
-  "/home/pi/Desktop/PetCare/codes/test/motor_test/main.cpp" "/home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles/Motor_test.dir/main.cpp.o"
+  "/home/pi/Desktop/PetCare/codes/test/motor_test/src/main.cpp" "/home/pi/Desktop/PetCare/codes/test/motor_test/build/CMakeFiles/Motor_test.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

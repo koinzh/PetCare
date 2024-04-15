@@ -4,6 +4,6 @@
 CMakeFiles/Weight_test.dir/lib/weight.cpp.o: ../lib/weight.cpp
 CMakeFiles/Weight_test.dir/lib/weight.cpp.o: ../lib/weight.h
 
-CMakeFiles/Weight_test.dir/main.cpp.o: ../lib/weight.h
-CMakeFiles/Weight_test.dir/main.cpp.o: ../main.cpp
+CMakeFiles/Weight_test.dir/src/main.cpp.o: ../lib/weight.h
+CMakeFiles/Weight_test.dir/src/main.cpp.o: ../src/main.cpp
 
