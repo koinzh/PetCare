@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/PetCare.dir/lib/IOTConnect.cpp.o"
   "CMakeFiles/PetCare.dir/lib/motor.cpp.o"
   "CMakeFiles/PetCare.dir/lib/sonic.cpp.o"
   "CMakeFiles/PetCare.dir/lib/water.cpp.o"

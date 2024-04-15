@@ -142,6 +142,33 @@ PetCare/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/build
 .PHONY : PetCare/fast
 
+lib/IOTConnect.o: lib/IOTConnect.cpp.o
+
+.PHONY : lib/IOTConnect.o
+
+# target to build an object file
+lib/IOTConnect.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/IOTConnect.cpp.o
+.PHONY : lib/IOTConnect.cpp.o
+
+lib/IOTConnect.i: lib/IOTConnect.cpp.i
+
+.PHONY : lib/IOTConnect.i
+
+# target to preprocess a source file
+lib/IOTConnect.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/IOTConnect.cpp.i
+.PHONY : lib/IOTConnect.cpp.i
+
+lib/IOTConnect.s: lib/IOTConnect.cpp.s
+
+.PHONY : lib/IOTConnect.s
+
+# target to generate assembly for a file
+lib/IOTConnect.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PetCare.dir/build.make CMakeFiles/PetCare.dir/lib/IOTConnect.cpp.s
+.PHONY : lib/IOTConnect.cpp.s
+
 lib/motor.o: lib/motor.cpp.o
 
 .PHONY : lib/motor.o
@@ -286,6 +313,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... PetCare"
+	@echo "... lib/IOTConnect.o"
+	@echo "... lib/IOTConnect.i"
+	@echo "... lib/IOTConnect.s"
 	@echo "... lib/motor.o"
 	@echo "... lib/motor.i"
 	@echo "... lib/motor.s"

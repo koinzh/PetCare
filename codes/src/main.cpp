@@ -3,6 +3,7 @@
 #include "weight.h"
 #include "water.h"
 #include "pigpio.h"
+#include "IOTConnect.h"
 #include <iostream>
 #include <csignal>
 #include <atomic>
@@ -16,6 +17,7 @@ std::chrono::time_point<std::chrono::steady_clock> lastReverseTime;
 std::chrono::time_point<std::chrono::steady_clock> lastReverseTime2;
 const std::chrono::seconds reverseCooldown(30);  // 设置十分钟冷却时间
 const std::chrono::seconds reverseCooldown2(2);
+//int weightThreshold = 400; 
 void signalHandler(int signum) {
     terminateProgram = true;
 }
@@ -31,13 +33,13 @@ int main() {
     UltrasonicSensor sensor(20, 21);//set sonic GPIO
     WaterLevelController waterLevelController(6, 5);//set water GPIO
     WeightSensor weightSensor(23, 24, -151774, 442.54f); //set weight GPIO
-    
+    IOTConnect iotconnect;
 
     int countBelowThreshold = 0;
     const int thresholdCount = 3; //detect three times distance < thresholdDistance and weight < weightThreshold
     const float thresholdDistance = 10.0;  
     const float minValidDistance = 0.1;  
-    const int weightThreshold = 400;  
+    int weightThreshold = iotconnect.weight1;  
 
     weightSensor.start();  
     std::thread waterThread([&](){while (!terminateProgram.load()) {}});//water 
@@ -48,9 +50,13 @@ int main() {
         auto now = std::chrono::steady_clock::now();  // 获取当前时间
         auto now2 = std::chrono::steady_clock::now();  
         weight1 = weightSensor.getLatestWeight();
-        if(now2 > lastReverseTime2 + reverseCooldown2 && weight1 >= 0){
-            std::cout << "Distance: " << distance << " cm, Weight: " << weight1 << " g" << std::endl;
+        if(now2 > lastReverseTime2 + reverseCooldown2 && weight1 >= 0 &&  weight1 != 342){
+            weightThreshold = iotconnect.weight1;
+            std::cout << "Distance: " << distance << " cm, Weight: " << weight1 << " g, weighthreshold:" << weightThreshold << "/n" << std::endl;
+            iotconnect.reportDistance(distance,weight1);
+          // weightThreshold = iotconnect.weight1;
             lastReverseTime2 = std::chrono::steady_clock::now(); 
+            
             }
        // std::cout << "Distance: " << distance << " cm, Weight: " << weightSensor.getLatestWeight() << " g" << std::endl;
     //   std::cout << " Weight: " << weightSensor.getLatestWeight() << " g" << std::endl;

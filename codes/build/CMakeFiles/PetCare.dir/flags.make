@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/pi/Desktop/PetCare/codes/lib
+CXX_INCLUDES = -I/home/pi/Desktop/PetCare/codes/external/LinkSDK/output/include -I/home/pi/Desktop/PetCare/codes/lib
 
 CXX_FLAGS = -std=gnu++11
 
