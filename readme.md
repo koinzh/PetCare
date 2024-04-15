@@ -1,23 +1,21 @@
 
+# PetCare
+
 [![4-Contributor](https://img.shields.io/badge/Contributors%20-4-brightgreen.svg?style=flat-square)](https://github.com/koinzh/PetCare/graphs/contributors)     [![License](https://img.shields.io/badge/License%20-MIT-red.svg?style=flat-square)](https://github.com/koinzh/PetCare/blob/main/LICENSE) 
 [![Stars](https://img.shields.io/badge/Stars%20-0-yellow.svg?style=flat-square)](https://github.com/koinzh/PetCare/stargazers) 
-[![Fork](https://img.shields.io/badge/Fork%20-0-blue.svg?style=flat-square)](https://github.com/koinzh/PetCare/forks) 
+[![Fork](https://img.shields.io/badge/Fork%20-0-blue.svg?style=flat-square)](https://github.com/koinzh/PetCare/forks)
 
-# PetCare
 
 ## Contents
 - [Introduction](#introduction)
 - [Demo](#demo)
 - [Equipment](#equipment)
 - [Circuit Diagram](#circuit-diagram)
-- [Repository Structure](#Repository-Structure)
 - [Get started](#get-started)
-- [Version Control](#version-controrl)
 - [License](#license)
 - [Acknowledgement](#acknowledgement)
 - [Contact us](#contact-us)
 - [Developer Log](#developer-log)
-
 
 
 ## Introduction
@@ -39,7 +37,7 @@ Full version video and Follow us on:
 * [TikTok](https://www.tiktok.com/@smartpetcaresyste?_t=8kk3llkyQGP&_r=1)
 
 
-# Equipment
+## Equipment
 * Raspberry Pi 3B+ 
 * Ultrasonic sensor (HC-SR04)
 * Weight sensor (HX711)
@@ -50,15 +48,6 @@ Full version video and Follow us on:
 
 ## Circuit Diagram
 ![circuit diagram](docs/circuit-diagram.png)
-
-
-## Repository Structure
-Here's an overview of what each directory and file in this repository is used for:
-
-- `/code`: Contains all the source code.
-- `/docs`: Documentation files for the project.
-- `readme.md`: The xx for installing the project.
-- `License`: The MIT license for the project.
 
 
 ## Get Started
@@ -108,7 +97,7 @@ This is an example of how to list things you need to use the software and how to
     ```
   * Navigate to the project folder
     ```sh
-    cd PetCare/codes/(updating)
+    cd PetCare/codes/src
     ```
     ```
     mkdir build
@@ -132,10 +121,6 @@ This is an example of how to list things you need to use the software and how to
     ./PetCare
     ```
 </details>
-
-
-## Version Control
-check the repository to see the avilable version
 
 
 ## License
