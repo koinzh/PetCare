@@ -11,6 +11,7 @@
 - [Demo](#demo)
 - [Equipment](#equipment)
 - [Circuit Diagram](#circuit-diagram)
+- [Features](#features)
 - [Get started](#get-started)
 - [License](#license)
 - [Acknowledgement](#acknowledgement)
@@ -22,12 +23,6 @@
 This project is the course design of real-time embedded system. In this course, we are the team 7. 
 
 When pets-owners leave home for a long time, feeding pets with food and water is a big problem. So we make an automatic pet feeder to help people feed their pets when they are busy. The design used raspberry PI to make an automatic feeder, real-time monitoring of pet movement and food. Upload the feeding records to aliyun cloud server. This project can realize intelligent feeding, protecting the health of pets.
-
-The ultrasonic sensor detects the distance to the pet and when the pet is close, the feeder starts working.
-
-In this system, the ultrasonic sensor detects the distance to the pet, and the feeder starts working when the pet is close. The weight sensor detects the weight of the food in the bowl. When the food weight is less than 300 grams, the motor starts to rotate the baffle 90 degrees to replenish the food. When the food weight is greater than 300 grams, the motor rotates backward. 
-
-The water sensor detects the level of water in the container. When the water level is less than the setting height, start the water pump to draw water from the water storage tank and add it to the water feeding container. The water pump runs for 1 second. 
 
 
 ## Demo
@@ -48,6 +43,18 @@ Full version video and Follow us on:
 
 ## Circuit Diagram
 ![circuit diagram](docs/circuit-diagram.png)
+
+
+## Features
+The ultrasonic sensor detects the distance to the pet and when the pet is close, the feeder starts working.
+
+In this system, the ultrasonic sensor detects the distance to the pet, and the feeder starts working when the pet is close. The weight sensor detects the weight of the food in the bowl. When the food weight is less than 300 grams, the motor starts to rotate the baffle 90 degrees to replenish the food. When the food weight is greater than 300 grams, the motor rotates backward. 
+
+The water sensor detects the level of water in the container. When the water level is less than the setting height, start the water pump to draw water from the water storage tank and add it to the water feeding container. The water pump runs for 1 second. 
+
+Following link to the UML documentation:
+
+![uml](docs/uml/html/index.html)
 
 
 ## Get Started
@@ -97,7 +104,7 @@ This is an example of how to list things you need to use the software and how to
     ```
   * Navigate to the project folder
     ```sh
-    cd PetCare/codes/src
+    cd PetCare/codes
     ```
     ```
     mkdir build
@@ -118,7 +125,7 @@ This is an example of how to list things you need to use the software and how to
 
   * Run application
     ```sh
-    ./PetCare
+    sudo ./PetCare
     ```
 </details>
 
@@ -137,10 +144,15 @@ MIT license
 
 ## Contact us 
 * Yutong Wang https://github.com/BigWYT
+
 * Bowen Ren https://github.com/midori-jojo
+
 * Zhiyu Ren https://github.com/rasethna
+
 * Xiaoyu Zhang https://github.com/koinzh
+
 * Project Link: https://github.com/koinzh/PetCare
+
 * TikTok Link: https://www.tiktok.com/@smartpetcaresyste?_t=8kk3llkyQGP&_r=1
 
 
@@ -188,5 +200,9 @@ MIT license
   * Date: 2024-04-13
 
     Debug test code for weight sensor.
+
+  * Date: 2024-04-15
+
+    Built the device. Finished successfully.
 
 </details>
